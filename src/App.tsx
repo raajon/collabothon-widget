@@ -4,6 +4,7 @@ import { BrowserRouter, createBrowserRouter, createRoutesFromElements, Route, Ro
 import PageLayout, { menuLoader } from './page/PageLayout';
 import Dashboard, { dashboardLoader } from './page/Dashboard';
 import Sandbox from './page/Sandbox';
+import LoadData from './page/LoadData';
 
 const App: React.FC = () =>{
   const router = createBrowserRouter(
@@ -12,6 +13,7 @@ const App: React.FC = () =>{
         <Route index element={<Sandbox/>} />
         <Route path="/dashboard/:id" element={<Dashboard/>} loader={dashboardLoader} />
         <Route path="sandbox" element={<Sandbox />} />
+        <Route path="loaddata" element={<LoadData />} />
         <Route path="*" element={<Sandbox />} />
       </Route>
   ))

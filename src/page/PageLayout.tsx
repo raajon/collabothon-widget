@@ -32,7 +32,8 @@ const PageLayout = () =>{
 
     const menuItems = useMemo(()=>[
         ...dashboardMenuItems,
-        {key:"sandbox", label:"Sandbox"}
+        {key:"sandbox", label:"Sandbox"},
+        {key:"loaddata", label:"LoadData"}
     ],[dashboardMenuItems]);
 
       
