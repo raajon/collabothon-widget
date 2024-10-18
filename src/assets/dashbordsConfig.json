@@ -1,0 +1,15 @@
+[
+    {
+        "title":"Selfstand",
+        "widgets":[
+            [{"type":"calendar"}]
+        ]
+    },
+    {
+        "title":"Dashboard 1",
+        "widgets":[
+            [{"type":"calendar"}, {"type":"calendar"}],
+            []
+        ]
+    }
+]

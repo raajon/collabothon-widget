@@ -11,6 +11,7 @@ const App: React.FC = () => (
       <Routes>
         <Route path="/" element={<PageLayout/>}>
           <Route index element={<Dashboard/>} />
+          <Route path="/dashboard/:id" element={<Dashboard />} />
           <Route path="sandbox" element={<Sandbox />} />
           <Route path="*" element={<Sandbox />} />
         </Route>

@@ -84,10 +84,10 @@ const CalendarWidget = () =>{
         return info.originNode;
       };
 
+      const header = () => (<div>dupa</div>)
+
     return(
-        <WidgetBorder>
-            <Calendar cellRender={cellRender}/>
-        </WidgetBorder>
+        <Calendar cellRender={cellRender} headerRender={header}/>
     )
 }
 
