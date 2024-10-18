@@ -5,7 +5,7 @@ import { WidgetType } from './types';
 import CalendarWidget from '../widgets/calendar/CalendarWidget';
 import CalendarWidgetEdit from '../widgets/calendar/CalendarWidgetEdit';
 
-const Widget = (widgetConfig:WidgetType) =>{
+const Widget = ({widgetConfig, i, j, update}:Props) =>{
 
     const [widgetConfigEdited, setWidgetConfigEdited] = useState(widgetConfig)
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -33,6 +33,7 @@ const Widget = (widgetConfig:WidgetType) =>{
     }
     
     const handleOk = () => {
+        update(i,j, widgetConfigEdited);
         setIsModalOpen(false);
     };
     
@@ -50,6 +51,13 @@ const Widget = (widgetConfig:WidgetType) =>{
             </Modal>
         </>
     )
+}
+
+interface Props{
+    widgetConfig: WidgetType
+    i: number
+    j: number
+    update: (i:number, j:number, config:WidgetType ) => void
 }
 
 export default Widget;
