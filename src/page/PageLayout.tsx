@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useMemo } from 'react';
 import { Layout, Menu, theme } from 'antd';
 import { Outlet, useNavigate } from 'react-router-dom';
 import dashboards from '../assets/dashbordsConfig.json'
@@ -14,10 +14,17 @@ const PageLayout = ({  }: Props) =>{
         token: { colorBgContainer, borderRadiusLG },
       } = theme.useToken();
 
-    const items = new Array(dashboards.length).fill(null).map((_, index) => ({
-        key: index,
-        label: dashboards[index].title,
-      }));
+    const dashboardMenuItems = useMemo(()=>
+            new Array(dashboards.length).fill(null).map((_, index) => ({
+            key: '/dashboard/'+index,
+            label: dashboards[index].title,
+        })),[]
+    )
+
+    const menuItems = useMemo(()=>[
+        ...dashboardMenuItems,
+        {key:"sandbox", label:"Sandbox"}
+    ],[]);
 
       
 
@@ -29,9 +36,9 @@ const PageLayout = ({  }: Props) =>{
                     theme="dark"
                     mode="horizontal"
                     defaultSelectedKeys={['0']}
-                    items={items}
+                    items={menuItems}
                     style={{ flex: 1, minWidth: 0 }}
-                    onSelect={(d)=>navigate('/dashboard/'+d.key)}
+                    onSelect={(d)=>navigate(d.key)}
                 />
             </Header>
             <Content style={{ padding: '0 48px' }}>

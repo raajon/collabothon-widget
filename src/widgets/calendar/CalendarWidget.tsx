@@ -84,7 +84,7 @@ const CalendarWidget = () =>{
         return info.originNode;
       };
 
-      const header = () => (<div>dupa</div>)
+    const header = () => (<div>dupa</div>)
 
     return(
         <Calendar cellRender={cellRender} headerRender={header}/>

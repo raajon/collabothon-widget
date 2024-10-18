@@ -2,13 +2,18 @@
     {
         "title":"Selfstand",
         "widgets":[
-            [{"type":"calendar"}]
+            [
+                {
+                    "type":"calendar",
+                    "title":"Kalendarz ogolny"
+                }
+            ]
         ]
     },
     {
         "title":"Dashboard 1",
         "widgets":[
-            [{"type":"calendar"}, {"type":"calendar"}],
+            [],
             []
         ]
     }
