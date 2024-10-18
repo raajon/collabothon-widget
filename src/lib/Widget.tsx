@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import WidgetBorder from './WidgetBorder';
-import { Calendar, Modal } from 'antd';
+import { Modal } from 'antd';
 import { WidgetType } from './types';
 import CalendarWidget from '../widgets/calendar/CalendarWidget';
 import CalendarWidgetEdit from '../widgets/calendar/CalendarWidgetEdit';

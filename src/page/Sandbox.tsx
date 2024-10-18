@@ -9,7 +9,7 @@ const Sandbox = () => {
   // Function to fetch data using Axios
   const fetchData = async () => {
     try {
-      const response = await axios.get("branches-api/1/v1/healthcheck", {
+      const response = await axios.get("/branches-api/1/v1/healthcheck", {
         headers: {
           KeyId: `${API_KEY}`,
         },

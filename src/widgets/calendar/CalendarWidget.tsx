@@ -1,7 +1,6 @@
 import { Badge, BadgeProps, Calendar, CalendarProps } from 'antd';
 import React from 'react';
 import type { Dayjs } from 'dayjs';
-import WidgetBorder from '../../lib/WidgetBorder';
 
 
 const getListData = (value: Dayjs) => {

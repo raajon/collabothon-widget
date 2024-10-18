@@ -1,4 +1,4 @@
-import React, { ReactElement, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { Layout, Menu, theme } from 'antd';
 import { Outlet, useNavigate } from 'react-router-dom';
 import dashboards from '../assets/dashbordsConfig.json'
@@ -6,7 +6,7 @@ import dashboards from '../assets/dashbordsConfig.json'
 
 const { Header, Content, Footer } = Layout;
 
-const PageLayout = ({  }: Props) =>{
+const PageLayout = () =>{
 
     const navigate = useNavigate();
 
@@ -24,7 +24,7 @@ const PageLayout = ({  }: Props) =>{
     const menuItems = useMemo(()=>[
         ...dashboardMenuItems,
         {key:"sandbox", label:"Sandbox"}
-    ],[]);
+    ],[dashboardMenuItems]);
 
       
 
@@ -57,9 +57,6 @@ const PageLayout = ({  }: Props) =>{
             </Footer>
         </Layout>
     )
-}
-
-interface Props{
 }
 
 export default PageLayout;
