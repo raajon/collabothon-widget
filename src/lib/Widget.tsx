@@ -7,6 +7,7 @@ import CalendarWidgetEdit from '../widgets/calendar/CalendarWidgetEdit';
 
 const Widget = (widgetConfig:WidgetType) =>{
 
+    const [widgetConfigEdited, setWidgetConfigEdited] = useState(widgetConfig)
     const [isModalOpen, setIsModalOpen] = useState(false);
     const {type, title} = widgetConfig;
 
@@ -21,11 +22,11 @@ const Widget = (widgetConfig:WidgetType) =>{
 
     const widgetEdit = useMemo(()=>{
         if(type==='calendar'){
-            return <CalendarWidgetEdit />
+            return <CalendarWidgetEdit widgetConfig={widgetConfigEdited} setWidgetConfigEdited={setWidgetConfigEdited}/>
         }else{
             return <div>Widget edit form type not found</div>
         }
-    },[type]);
+    },[type, widgetConfigEdited]);
 
     const showEdit = () =>{
         setIsModalOpen(true);

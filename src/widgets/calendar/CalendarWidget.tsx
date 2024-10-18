@@ -71,8 +71,8 @@ const CalendarWidget = () =>{
         const listData = getListData(value);
         return (
           <>
-            {listData.map((item) => (             
-                <Badge status={item.type as BadgeProps['status']} />
+            {listData.map((item, i) => (             
+                <Badge key={i} status={item.type as BadgeProps['status']} />
             ))}
           </>
         );
