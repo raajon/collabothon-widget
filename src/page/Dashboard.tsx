@@ -1,41 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
 import { Col, Row, Typography } from 'antd';
-import dashboards from '../assets/dashbordsConfig.json'
 import Widget from '../lib/Widget';
-import { WidgetType } from '../lib/types';
+import { DashboardType, WidgetType } from '../lib/types';
 import axios from 'axios';
 
+export async function dashboardLoader({params}: any) {
+    const dashboard = await axios.get("/parse/classes/Dashboard/"+params.id, {
+        headers: {
+        'X-Parse-Application-Id': "collabothon",
+        },
+    });
+    return dashboard.data;
+}
+
 const Dashboard = () =>{
+    const  dashboard = useLoaderData() as DashboardType;
     const { Title } = Typography;
-
-    const { id } = useParams();
-    const dashboard = dashboards[Number(id) | 0];
-    const widgets:WidgetType[][] = dashboards[Number(id) | 0].widgets;
-
-    const [data, setData] = useState([]);
-    const API_KEY = "collabothon";
-
-    // Function to fetch data using Axios
-    const fetchData = async () => {
-        try {
-        const response = await axios.get("/parse/classes/Custom", {
-            headers: {
-            'X-Parse-Application-Id': `${API_KEY}`,
-            },
-        });
-        setData(response.data);
-        } catch (error) {
-        console.error("Error fetching data:", error);
-        }
-    };
-
-    // Call fetchData on component mount
-    useEffect(() => {
-        fetchData();
-    }, []);
-
-    console.log(data);
+    const widgets:WidgetType[][] = dashboard.widgets || [];
 
     return(
         <>

@@ -1,14 +1,23 @@
 import React, { useMemo } from 'react';
 import { Layout, Menu, theme } from 'antd';
-import { Outlet, useNavigate } from 'react-router-dom';
-import dashboards from '../assets/dashbordsConfig.json'
+import { Outlet, useLoaderData, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { DashboardType } from '../lib/types';
 
-
-const { Header, Content, Footer } = Layout;
+export async function menuLoader() {
+    const dashboards = await axios.get("/parse/classes/Dashboard", {
+        headers: {
+        'X-Parse-Application-Id': "collabothon",
+        },
+    });
+    return dashboards.data.results;
+}
 
 const PageLayout = () =>{
 
+    const { Header, Content, Footer } = Layout;
     const navigate = useNavigate();
+    const  dashboards = useLoaderData() as DashboardType[];
 
     const {
         token: { colorBgContainer, borderRadiusLG },
@@ -16,7 +25,7 @@ const PageLayout = () =>{
 
     const dashboardMenuItems = useMemo(()=>
             new Array(dashboards.length).fill(null).map((_, index) => ({
-            key: '/dashboard/'+index,
+            key: '/dashboard/'+dashboards[index].objectId,
             label: dashboards[index].title,
         })),[]
     )

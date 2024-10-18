@@ -1,4 +1,5 @@
 export interface DashboardType{
+    objectId: string,
     title:string,
     widgets: WidgetType[][]
 }
