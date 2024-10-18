@@ -1,17 +1,17 @@
 import React from 'react';
-import { Button, ConfigProvider, Layout } from 'antd';
-import Widget from './lib/Widget';
+import { ConfigProvider } from 'antd';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import PageLayout from './page/PageLayout';
+import Dashboard from './page/Dashboard';
 
 const App: React.FC = () => (
   <ConfigProvider theme={{ token: { colorPrimary: '#00b96b' } }}>
     <MemoryRouter>
       <Routes>
         <Route path="/" element={<PageLayout/>}>
-          <Route index element={<Widget/>} />
-          <Route path="newpost" element={<Widget />} />
-          <Route path="*" element={<Widget />} />
+          <Route index element={<Dashboard/>} />
+          <Route path="newpost" element={<Dashboard />} />
+          <Route path="*" element={<Dashboard />} />
         </Route>
       </Routes>
     </MemoryRouter>
