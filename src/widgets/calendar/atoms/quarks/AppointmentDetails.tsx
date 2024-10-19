@@ -1,17 +1,21 @@
 import { Button } from "antd";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { AppointmentProps } from "../../../../lib/types";
 
-const AppointmentDetails = () => {
-    
-    const navigate = useNavigate();
+const AppointmentDetails = ({ data }: Props) => {
+  const navigate = useNavigate();
 
-    return (
-        <>
-            <Button onClick={()=>navigate("/onet.pl")}>onet</Button>
-        </>
-    
-    )
+  return (
+    <>
+      <p>{data.place}</p>
+      <Button onClick={() => navigate("/onet.pl")}>onet</Button>
+    </>
+  );
+};
+
+interface Props {
+  data: AppointmentProps;
 }
 
 export default AppointmentDetails;

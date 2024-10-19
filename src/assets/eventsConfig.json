@@ -56,7 +56,9 @@
             "__type": "Date",
             "iso": "2024-11-05T15:00:00.000Z"
         },
-        "data": {},
+        "data": {
+            "description": "TBD"
+        },
         "type": "custom",
         "title": "Budget Planning Meeting"
     },
@@ -69,7 +71,9 @@
             "__type": "Date",
             "iso": "2024-10-14T12:45:00.000Z"
         },
-        "data": {},
+        "data": {
+            "description": "TBD"
+        },
         "type": "custom",
         "title": "Crisis Management Planning Session"
     },
@@ -82,7 +86,9 @@
             "__type": "Date",
             "iso": "2024-11-07T12:00:00.000Z"
         },
-        "data": {},
+        "data": {
+            "description": "TBD"
+        },
         "type": "custom",
         "title": "Budget Planning Meeting"
     },
@@ -95,7 +101,9 @@
             "__type": "Date",
             "iso": "2024-12-10T13:00:00.000Z"
         },
-        "data": {},
+        "data": {
+            "description": "TBD"
+        },
         "type": "custom",
         "title": "Industry Trends Analysis Meeting"
     },
@@ -108,7 +116,9 @@
             "__type": "Date",
             "iso": "2024-12-01T10:00:00.000Z"
         },
-        "data": {},
+        "data": {
+            "description": "TBD"
+        },
         "type": "downtime",
         "title": "Payments"
     },
@@ -121,7 +131,9 @@
             "__type": "Date",
             "iso": "2024-11-12T21:00:00.000Z"
         },
-        "data": {},
+        "data": {
+            "description": "TBD"
+        },
         "type": "downtime",
         "title": "Website Access"
     },
@@ -134,7 +146,9 @@
             "__type": "Date",
             "iso": "2024-11-21T08:00:00.000Z"
         },
-        "data": {},
+        "data": {
+            "description": "TBD"
+        },
         "type": "downtime",
         "title": "Account access"
     },
@@ -147,7 +161,9 @@
             "__type": "Date",
             "iso": "2024-10-14T09:15:00.000Z"
         },
-        "data": {},
+        "data": {
+            "description": "TBD"
+        },
         "type": "downtime",
         "title": "Transaction history"
     },
@@ -160,7 +176,9 @@
             "__type": "Date",
             "iso": "2024-10-07T03:00:00.000Z"
         },
-        "data": {},
+        "data": {
+            "description": "TBD"
+        },
         "type": "downtime",
         "title": "Fund transfers"
     },
@@ -169,7 +187,9 @@
             "__type": "Date",
             "iso": "2024-12-25T00:00:00.000Z"
         },
-        "data": {},
+        "data": {
+            "description": "TBD"
+        },
         "type": "importantDeadlines",
         "title": "Monthly VAT Settlement (JPK_V7M)"
     },
@@ -178,7 +198,9 @@
             "__type": "Date",
             "iso": "2024-09-30T00:00:00.000Z"
         },
-        "data": {},
+        "data": {
+            "description": "TBD"
+        },
         "type": "importantDeadlines",
         "title": "VAT under the EU VAT OSS Scheme"
     },
@@ -187,7 +209,9 @@
             "__type": "Date",
             "iso": "2025-01-25T00:00:00.000Z"
         },
-        "data": {},
+        "data": {
+            "description": "TBD"
+        },
         "type": "importantDeadlines",
         "title": "Monthly VAT Settlement (JPK_V7M)"
     },
@@ -240,7 +264,9 @@
             "__type": "Date",
             "iso": "2024-12-31T00:00:00.000Z"
         },
-        "data": {},
+        "data": {
+            "description": "TBD"
+        },
         "type": "importantDeadlines",
         "title": "VAT under the EU VAT OSS Scheme"
     },
@@ -249,7 +275,9 @@
             "__type": "Date",
             "iso": "2024-10-25T00:00:00.000Z"
         },
-        "data": {},
+        "data": {
+            "description": "TBD"
+        },
         "type": "importantDeadlines",
         "title": "Monthly VAT Settlement (JPK_V7M)"
     },
@@ -258,7 +286,9 @@
             "__type": "Date",
             "iso": "2024-11-25T00:00:00.000Z"
         },
-        "data": {},
+        "data": {
+            "description": "TBD"
+        },
         "type": "importantDeadlines",
         "title": "Monthly VAT Settlement (JPK_V7M)"
     },
