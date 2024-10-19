@@ -72,7 +72,7 @@ const Widget = ({ widgetConfig, i, j, update }: Props) => {
 
     return (
         <>
-            <WidgetBorder title={title} logo={type === 'calendar'} showEdit={showEdit} showNewEventCreate={showNewEventCreate}>
+            <WidgetBorder title={title} type={type} logo={type === 'calendar'} showEdit={showEdit} showNewEventCreate={showNewEventCreate}>
                 {widget}
             </WidgetBorder>
             <Modal title="New Event" open={isNewEventModalOpen} footer={
