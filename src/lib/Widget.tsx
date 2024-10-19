@@ -4,25 +4,32 @@ import { Modal } from 'antd';
 import { WidgetType } from './types';
 import UtmWidget from '../widgets/calendar/UtmWidget';
 import UtmWidgetEdit from '../widgets/calendar/UtmWidgetEdit';
+import MockWidget from '../widgets/mock/MockWidget';
+import MockWidgetEdit from '../widgets/mock/MockWidgetEdit';
 
 const Widget = ({widgetConfig, i, j, update}:Props) =>{
 
     const [widgetConfigEdited, setWidgetConfigEdited] = useState(widgetConfig)
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const {type, title} = widgetConfig;
+    const {type, title, mode} = widgetConfig;
+    console.log(type, title, mode)
 
     const widget = useMemo(()=>{
         if(type==='calendar'){
-            return <UtmWidget />
+            return <UtmWidget widgetConfig={widgetConfig}/>
+        }else if(type==='mock'){
+            return <MockWidget widgetConfig={widgetConfig}/>
         }else{
             return <div>Widget type not found</div>
         }
-    },[type]);
+    },[type, widgetConfig]);
 
 
     const widgetEdit = useMemo(()=>{
         if(type==='calendar'){
             return <UtmWidgetEdit widgetConfig={widgetConfigEdited} setWidgetConfigEdited={setWidgetConfigEdited}/>
+        }else if(type==='mock'){
+            return <MockWidgetEdit widgetConfig={widgetConfigEdited} setWidgetConfigEdited={setWidgetConfigEdited}/>
         }else{
             return <div>Widget edit form type not found</div>
         }

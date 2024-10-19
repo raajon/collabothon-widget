@@ -14,7 +14,12 @@
         "title":"Dashboard 1",
         "widgets":[
             [],
-            []
+            [
+                {
+                    "type":"mock",
+                    "title":"Wykres 1"
+                }
+            ]
         ]
     }
 ]

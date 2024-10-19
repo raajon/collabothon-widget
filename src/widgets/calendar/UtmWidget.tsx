@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react';
 import type { Dayjs } from 'dayjs';
 import UtmWidgetCalendar from './atoms/UtmWidgetCalendar';
 import axios from 'axios';
-import { EventType } from '../../lib/types';
+import { EventType, WidgetType } from '../../lib/types';
 import UtmWidgetList from './atoms/UtmWidgetList';
 import UtmWidgetFilter from './atoms/UtmWidgetFilter';
 
-const UtmWidget = () => {
+const UtmWidget = ({widgetConfig}:Props) => {
   const [data, setData] = useState([] as EventType[]);
   const [filteredData, setFilteredData] = useState([] as EventType[]);
   const [types, setTypes] = useState<string[]>([]);
@@ -67,5 +67,9 @@ const UtmWidget = () => {
     </>
   );
 };
+
+interface Props{
+  widgetConfig: WidgetType
+}
 
 export default UtmWidget;

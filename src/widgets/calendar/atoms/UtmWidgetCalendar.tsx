@@ -27,7 +27,13 @@ const UtmWidgetCalendar = ({data}:Props) =>{
           <ul className="events">
             {filterEvents(value).map((item: EventType, i) => (
               <li key={item.title}>
-                <Badge color={getItemStyle(item.type)} status={item.type as BadgeProps['status']} text={item.title} />
+                <Badge 
+                  color={getItemStyle(item.type)} 
+                  status={item.type as BadgeProps['status']} 
+                  text={item.title} 
+                  title={item.title} 
+                  size={'small'}
+                />
               </li>
             ))}
           </ul>
@@ -40,12 +46,6 @@ const UtmWidgetCalendar = ({data}:Props) =>{
         return info.originNode;
       };
 
-    // const header = () => (<div>dupa</div>)
-
-    // const header:HeaderRender<Dayjs> = (config) => {
-    //   console.log(config, config.value)
-    //   return(<div>dupa</div>)
-    // }
 
     const header = ({ value, type, onChange, onTypeChange }:any): React.ReactNode => {
       const myOnChange = (date: Dayjs) =>{
