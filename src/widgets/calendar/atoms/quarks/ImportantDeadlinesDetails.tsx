@@ -2,7 +2,7 @@ import React from "react";
 import { ImportantDeadlineProps } from "../../../../lib/types";
 
 const ImportantDeadlinesDetails = ({ data }: Props) => {
-  return <p>ImportantDeadlinesDetails</p>;
+  return <p>{data.description}</p>;
 };
 
 interface Props {

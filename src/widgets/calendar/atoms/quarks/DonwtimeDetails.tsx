@@ -2,7 +2,7 @@ import React from "react";
 import { DowntimeProps } from "../../../../lib/types";
 
 const DonwtimeDetails = ({ data }: Props) => {
-  return <p>DonwtimeDetails</p>;
+  return <p>{data.description}</p>;
 };
 
 interface Props {

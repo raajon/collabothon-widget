@@ -2,7 +2,7 @@ import React from "react";
 import { CustomProps } from "../../../../lib/types";
 
 const CustomDetails = ({ data }: Props) => {
-  return <p>CustomDetails</p>;
+  return <p>{data.description}</p>;
 };
 
 interface Props {
