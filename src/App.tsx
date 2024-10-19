@@ -16,7 +16,7 @@ const App: React.FC = () =>{
         <Route path="/dashboard/:id" element={<Dashboard/>} loader={dashboardLoader} />
         <Route path="sandbox" element={<Sandbox />} />
         <Route path="loaddata" element={<LoadData />} />
-        <Route path="onet.pl" element={<CustomDetails/>} />
+        <Route path="onet.pl" element={<div><h1>STRONA PŁATNOŚCI CZY COŚ TAM</h1></div>} />
         <Route path="*" element={<Sandbox />} />
       </Route>
   ))
