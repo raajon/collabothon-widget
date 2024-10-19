@@ -21,7 +21,21 @@ const UtmWidgetCalendar = ({data, small=false, setSelectedDate}:Props) =>{
     }
 
     const dateCellRender = (value: Dayjs) => {
-        
+      if(small){        
+        return (
+          <>
+            {filterEvents(value).map((item: EventType, i) => (
+                <Badge 
+                  key={i}
+                  color={getItemStyle(item.type)} 
+                  status={item.type as BadgeProps['status']} 
+                  title={item.title} 
+                  size={'small'}
+                />
+            ))}
+          </>
+        );
+      }else{        
         return (
           <ul className="events">
             {filterEvents(value).map((item: EventType, i) => (
@@ -37,6 +51,7 @@ const UtmWidgetCalendar = ({data, small=false, setSelectedDate}:Props) =>{
             ))}
           </ul>
         );
+      }
     };
 
     const cellRender: CalendarProps<Dayjs>['cellRender'] = (current, info) => {
@@ -63,6 +78,7 @@ const UtmWidgetCalendar = ({data, small=false, setSelectedDate}:Props) =>{
     return(
       <>
         <Calendar 
+          fullscreen={!small}
           cellRender={cellRender} 
           headerRender={header} 
           onSelect={(newValue: Dayjs)=>setModalDate(newValue)} 
