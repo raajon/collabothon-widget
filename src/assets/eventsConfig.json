@@ -209,9 +209,9 @@
             "iso": "2024-12-31T00:00:00.000Z"
         },
         "data": {
-            "title": "VAT under the VAT IOSS Import Procedure"
+            "title": "VAT under the VAT IOSS Import Procedure",
+            "description": "Last day of the month for the previous month"
         },
-        "description": "Last day of the month for the previous month",
         "type": "importantDeadlines"
     },
     {
