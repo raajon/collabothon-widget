@@ -3,16 +3,17 @@ import React from 'react';
 import type { Dayjs } from 'dayjs';
 import { EventType } from '../../../lib/types';
 import colors from "../../../colors"
+import classes from "./UtmWidgetCalendar.module.css"
 
 const UtmWidgetCalendar = ({data}:Props) =>{
 
     const getItemStyle = (type: string) => {
         switch (type) {
-          case 'Downtime':
+          case 'downtime':
             return colors.harvest;
-          case 'Custom':
+          case 'custom':
             return colors.mint;
-          case 'Appointment':
+          case 'appointment':
             return colors.warning;
           default:
             return colors.petrol
@@ -26,11 +27,19 @@ const UtmWidgetCalendar = ({data}:Props) =>{
             d.startDate.getMonth() === value.month()
         );
         return (
-            <>
-            {listData.map((item, i) => (             
-                <Badge key={i} color={getItemStyle(item.type)} status={item.type as BadgeProps['status']} />
+            // <>
+            //   {listData.map((item: EventType, i) => (             
+            //       <Badge key={i} color={getItemStyle(item.type)} status={item.type as BadgeProps['status']} text={item.data.title}/>
+            //   ))}
+            // </>
+
+          <ul className="events">
+            {listData.map((item: EventType, i) => (
+              <li key={item.data.title}>
+                <Badge color={getItemStyle(item.type)} status={item.type as BadgeProps['status']} text={item.data.title} />
+              </li>
             ))}
-            </>
+          </ul>
         );
     };
 
