@@ -57,10 +57,10 @@ const UtmWidget = () => {
         setSelectedTypes={setSelectedTypes}
       />
       <Row justify='space-between'>
-        <Col span={11}>
+        <Col span={17}>
           <UtmWidgetCalendar data={filteredData} />
         </Col>
-        <Col span={11}>
+        <Col span={6}>
           <UtmWidgetList data={filteredData} />
         </Col>
       </Row>
