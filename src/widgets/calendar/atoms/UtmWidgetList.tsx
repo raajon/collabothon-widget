@@ -10,6 +10,7 @@ import ImportantDeadlinesDetails from "./quarks/ImportantDeadlinesDetails";
 import CustomDetails from "./quarks/CustomDetails";
 import StandingOrderDetails from "./quarks/StandingOrderDetails";
 import AppointmentDetails from "./quarks/AppointmentDetails";
+import dayjs from 'dayjs';
 
 const UtmWidgetList = ({ data }: Props) => {
   const onChange = (key: string | string[]) => {
@@ -51,7 +52,7 @@ const UtmWidgetList = ({ data }: Props) => {
   ) =>
     data.map((item, index) => ({
       key: index,
-      label: `${item.title}`,
+      label: `${dayjs(item.startDate).format('DD-MM-YYYY')} ${item.title}`,
       children: getProperComponent(item.type, item.data),
       style: { ...panelStyle, borderLeftColor: getItemStyle(item.type) },
     }));

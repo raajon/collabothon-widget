@@ -27,7 +27,10 @@ const UtmWidget = () => {
             d.endDate = new Date(d.endDate.iso);
           }
         });
-        setData(data.results);
+        const sortedResults = data.results?.sort((a:EventType, b:EventType) => {
+          return a.startDate.getTime() - b.startDate.getTime(); // Sort in ascending order
+        });
+        setData(sortedResults);
       });
   }, []);
 
