@@ -1,6 +1,6 @@
 import React from "react";
 import type { CSSProperties } from "react";
-import { EventType } from "../../../lib/types";
+import { EventType, LoanScheduleProps, UniversalDetailProps } from "../../../lib/types";
 import type { CollapseProps } from "antd";
 import { Collapse } from "antd";
 import getItemStyle from "../../../utils/getItemStyle";
@@ -21,13 +21,13 @@ const UtmWidgetList = ({ data }: Props) => {
     borderLeftStyle: "solid",
   };
 
-  const getProperComponent = (key: string) => {
+  const getProperComponent = (key: string, details: UniversalDetailProps) => {
     switch (key) {
       case "downtime":
         return <DonwtimeDetails />;
 
       case "loanSchedule":
-        return <LoanScheduleDetails />;
+        return <LoanScheduleDetails data={details}/>;
 
       case "importantDeadlines":
         return <ImportantDeadlinesDetails />;
@@ -52,7 +52,7 @@ const UtmWidgetList = ({ data }: Props) => {
     data.map((item, index) => ({
       key: index,
       label: `${item.title}`,
-      children: getProperComponent(item.type),
+      children: getProperComponent(item.type, item.data),
       style: { ...panelStyle, borderLeftColor: getItemStyle(item.type) },
     }));
 

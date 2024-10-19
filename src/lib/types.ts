@@ -1,3 +1,5 @@
+import LoanScheduleDetails from "../widgets/calendar/atoms/quarks/LoanScheduleDetails"
+
 export interface DashboardType {
     objectId: string,
     title: string,
@@ -15,6 +17,21 @@ export interface EventType {
     startDate: Date
     endDate: Date
     title: string
-    data: any
-    
+    data: UniversalDetailProps 
+
 }
+
+export interface LoanScheduleProps {
+    capital_installement: number;
+    interest_installement: number;
+    currency: string;
+    loanDetails: {
+        title: string;
+        number: string;
+        currency: string;
+        total_capital: number;
+        remaining_capital: number;
+    };
+}
+
+export type UniversalDetailProps = LoanScheduleProps | any

@@ -265,66 +265,18 @@
     {
         "startDate": {
             "__type": "Date",
-            "iso": "2023-10-02T16:57:00.000Z"
-        },
-        "endDate": {
-            "__type": "Date",
-            "iso": "2033-10-02T16:57:00.000Z"
-        },
-        "data": {
-            "number": "16 8959 0001 9344 2345 9096 0099",
-            "currency": "EUR",
-            "total_capital": 2000000,
-            "remaining_capital": 956000
-        },
-        "type": "loan",
-        "title": "Commercial real estate loan"
-    },
-    {
-        "startDate": {
-            "__type": "Date",
-            "iso": "2022-10-18T16:55:00.000Z"
-        },
-        "endDate": {
-            "__type": "Date",
-            "iso": "2027-10-18T16:55:56.386Z"
-        },
-        "data": {
-            "number": "16 8959 0001 9344 4287 9096 1457",
-            "currency": "EUR",
-            "total_capital": 700000,
-            "remaining_capital": 350000
-        },
-        "type": "loan",
-        "title": "Equipment financing loan"
-    },
-    {
-        "startDate": {
-            "__type": "Date",
-            "iso": "2022-01-03T16:52:00.000Z"
-        },
-        "endDate": {
-            "__type": "Date",
-            "iso": "2032-01-02T16:52:00.000Z"
-        },
-        "data": {
-            "number": "16 8959 0001 9399 4287 9096 1370",
-            "currency": "EUR",
-            "total_capital": 3000000,
-            "remaining_capital": 2785000
-        },
-        "type": "loan",
-        "title": "Startup loan"
-    },
-    {
-        "startDate": {
-            "__type": "Date",
             "iso": "2024-11-23T17:04:00.000Z"
         },
         "data": {
             "capital_installement": 3690,
             "interest_installement": 4115,
-            "loan_number": "16 8959 0001 9344 4287 9096 1457",
+            "loanDetails": {
+                "title": "Equipment financing loan",
+                "number": "16 8959 0001 9344 4287 9096 1457",
+                "currency": "EUR",
+                "total_capital": 700000,
+                "remaining_capital": 350000
+            },
             "currency": "EUR"
         },
         "type": "loanSchedule",
@@ -338,7 +290,13 @@
         "data": {
             "capital_installement": 25000,
             "interest_installement": 35000,
-            "loan_number": "16 8959 0001 9399 4287 9096 1370",
+            "loanDetails": {
+                "title": "Startup loan",
+                "number": "16 8959 0001 9399 4287 9096 1370",
+                "currency": "EUR",
+                "total_capital": 3000000,
+                "remaining_capital": 2785000
+            },
             "currency": "EUR"
         },
         "type": "loanSchedule",
@@ -352,7 +310,13 @@
         "data": {
             "capital_installement": 25000,
             "interest_installement": 35000,
-            "loan_number": "16 8959 0001 9399 4287 9096 1370",
+            "loanDetails": {
+                "title": "Startup loan",
+                "number": "16 8959 0001 9399 4287 9096 1370",
+                "currency": "EUR",
+                "total_capital": 3000000,
+                "remaining_capital": 2785000
+            },
             "currency": "EUR"
         },
         "type": "loanSchedule",
@@ -366,7 +330,13 @@
         "data": {
             "capital_installement": 25000,
             "interest_installement": 35000,
-            "loan_number": "16 8959 0001 9399 4287 9096 1370",
+            "loanDetails": {
+                "title": "Startup loan",
+                "number": "16 8959 0001 9399 4287 9096 1370",
+                "currency": "EUR",
+                "total_capital": 3000000,
+                "remaining_capital": 2785000
+            },
             "currency": "EUR"
         },
         "type": "loanSchedule",
@@ -380,7 +350,13 @@
         "data": {
             "capital_installement": 25000,
             "interest_installement": 35000,
-            "loan_number": "16 8959 0001 9399 4287 9096 1370",
+            "loanDetails": {
+                "title": "Startup loan",
+                "number": "16 8959 0001 9399 4287 9096 1370",
+                "currency": "EUR",
+                "total_capital": 3000000,
+                "remaining_capital": 2785000
+            },
             "currency": "EUR"
         },
         "type": "loanSchedule",
@@ -394,7 +370,13 @@
         "data": {
             "capital_installement": 3690,
             "interest_installement": 4115,
-            "loan_number": "16 8959 0001 9344 4287 9096 1457",
+            "loanDetails": {
+                "title": "Equipment financing loan",
+                "number": "16 8959 0001 9344 4287 9096 1457",
+                "currency": "EUR",
+                "total_capital": 700000,
+                "remaining_capital": 350000
+            },
             "currency": "EUR"
         },
         "type": "loanSchedule",
@@ -408,7 +390,13 @@
         "data": {
             "capital_installement": 6789,
             "interest_installement": 7586,
-            "loan_number": "16 8959 0001 9344 2345 9096 0099",
+            "loanDetails": {
+                "title": "Commercial real estate loan",
+                "number": "16 8959 0001 9344 2345 9096 0099",
+                "currency": "EUR",
+                "total_capital": 2000000,
+                "remaining_capital": 956000
+            },
             "currency": "EUR"
         },
         "type": "loanSchedule",
@@ -422,7 +410,13 @@
         "data": {
             "capital_installement": 3690,
             "interest_installement": 4115,
-            "loan_number": "16 8959 0001 9344 4287 9096 1457",
+            "loanDetails": {
+                "title": "Equipment financing loan",
+                "number": "16 8959 0001 9344 4287 9096 1457",
+                "currency": "EUR",
+                "total_capital": 700000,
+                "remaining_capital": 350000
+            },
             "currency": "EUR"
         },
         "type": "loanSchedule",
@@ -436,7 +430,13 @@
         "data": {
             "capital_installement": 6789,
             "interest_installement": 7586,
-            "loan_number": "16 8959 0001 9344 2345 9096 0099",
+            "loanDetails": {
+                "title": "Commercial real estate loan",
+                "number": "16 8959 0001 9344 2345 9096 0099",
+                "currency": "EUR",
+                "total_capital": 2000000,
+                "remaining_capital": 956000
+            },
             "currency": "EUR"
         },
         "type": "loanSchedule",
@@ -450,7 +450,13 @@
         "data": {
             "capital_installement": 6789,
             "interest_installement": 7586,
-            "loan_number": "16 8959 0001 9344 2345 9096 0099",
+            "loanDetails": {
+                "title": "Commercial real estate loan",
+                "number": "16 8959 0001 9344 2345 9096 0099",
+                "currency": "EUR",
+                "total_capital": 2000000,
+                "remaining_capital": 956000
+            },
             "currency": "EUR"
         },
         "type": "loanSchedule",
@@ -464,7 +470,13 @@
         "data": {
             "capital_installement": 3690,
             "interest_installement": 4115,
-            "loan_number": "16 8959 0001 9344 4287 9096 1457",
+            "loanDetails": {
+                "title": "Equipment financing loan",
+                "number": "16 8959 0001 9344 4287 9096 1457",
+                "currency": "EUR",
+                "total_capital": 700000,
+                "remaining_capital": 350000
+            },
             "currency": "EUR"
         },
         "type": "loanSchedule",
@@ -478,7 +490,13 @@
         "data": {
             "capital_installement": 6789,
             "interest_installement": 7586,
-            "loan_number": "16 8959 0001 9344 2345 9096 0099",
+            "loanDetails": {
+                "title": "Commercial real estate loan",
+                "number": "16 8959 0001 9344 2345 9096 0099",
+                "currency": "EUR",
+                "total_capital": 2000000,
+                "remaining_capital": 956000
+            },
             "currency": "EUR"
         },
         "type": "loanSchedule",
@@ -512,7 +530,7 @@
             "account_from": "94 9150 0009 1946 6058 9058 9151"
         },
         "type": "standingOrder",
-        "title": "Consulting Fees \u2013 Project X"
+        "title": "Consulting Fees - Project X"
     },
     {
         "startDate": {
@@ -527,7 +545,7 @@
             "currency": "EUR"
         },
         "type": "standingOrder",
-        "title": "Consulting Fees \u2013 Project X"
+        "title": "Consulting Fees - Project X"
     },
     {
         "startDate": {
@@ -602,7 +620,7 @@
             "account_from": "94 9150 0009 1946 6058 9058 9151"
         },
         "type": "standingOrder",
-        "title": "Consulting Fees \u2013 Project X"
+        "title": "Consulting Fees - Project X"
     },
     {
         "startDate": {
