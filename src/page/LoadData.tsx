@@ -51,7 +51,7 @@ const LoadData = () =>{
             },
         });
         for (const obj of fetchedData.data.results) {
-            await axios.delete(`/parse/classes/${table}`+ obj.objectId, {
+            await axios.delete(`/parse/classes/${table}/`+ obj.objectId, {
                 headers: {
                 'X-Parse-Application-Id': "collabothon",
                 },

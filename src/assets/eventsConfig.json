@@ -1,6 +1,6 @@
 [
     {
-        "type": "Appointment",
+        "type": "appointment",
         "data": {
             "appointmentWIth": "Mark Lee",
             "place": "Kaiserstraße 74, 63065 Offenbach am Main",
@@ -12,7 +12,7 @@
         }
     },
     {
-        "type": "Appointment",
+        "type": "appointment",
         "data": {
             "title": "Business Account Review",
             "appointmentWIth": "Sarah Johnson",
@@ -24,7 +24,7 @@
         }
     },
     {
-        "type": "Appointment",
+        "type": "appointment",
         "data": {
             "title": "Strategic Planning Session",
             "place": "Roßmarkt 14, 60311 Frankfurt am Main",
@@ -36,7 +36,7 @@
         }
     },
     {
-        "type": "Appointment",
+        "type": "appointment",
         "data": {
             "place": "Roßmarkt 14, 60311 Frankfurt am Main",
             "title": "Commercial Loan Consultation",
@@ -46,5 +46,132 @@
             "__type": "Date",
             "iso": "2024-10-07T10:30:00.000Z"
         }
-    }
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-11-05T12:00:00.000Z"
+        },
+        "endDate": {
+            "__type": "Date",
+            "iso": "2024-11-05T15:00:00.000Z"
+        },
+        "data": {
+            "title": "Budget Planning Meeting"
+        },
+        "type": "custom"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-10-14T11:00:00.000Z"
+        },
+        "endDate": {
+            "__type": "Date",
+            "iso": "2024-10-14T12:45:00.000Z"
+        },
+        "data": {
+            "title": "Crisis Management Planning Session"
+        },
+        "type": "custom"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-11-07T10:00:00.000Z"
+        },
+        "endDate": {
+            "__type": "Date",
+            "iso": "2024-11-07T12:00:00.000Z"
+        },
+        "data": {
+            "title": "Budget Planning Meeting"
+        },
+        "type": "custom"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-12-10T10:40:00.000Z"
+        },
+        "endDate": {
+            "__type": "Date",
+            "iso": "2024-12-10T13:00:00.000Z"
+        },
+        "data": {
+            "title": "Industry Trends Analysis Meeting"
+        },
+        "type": "custom"
+    },
+    {
+        "startDate": {
+          "__type": "Date",
+          "iso": "2024-12-01T06:00:00.000Z"
+        },
+        "endDate": {
+          "__type": "Date",
+          "iso": "2024-12-01T10:00:00.000Z"
+        },
+        "data": {
+          "affectedService": "Payments"
+        },
+        "type": "downtime"
+      },
+      {
+        "startDate": {
+          "__type": "Date",
+          "iso": "2024-11-12T19:00:00.000Z"
+        },
+        "endDate": {
+          "__type": "Date",
+          "iso": "2024-11-12T21:00:00.000Z"
+        },
+        "data": {
+          "affectedService": "Website Access"
+        },
+        "type": "downtime"
+      },
+      {
+        "startDate": {
+          "__type": "Date",
+          "iso": "2024-11-20T08:00:00.000Z"
+        },
+        "endDate": {
+          "__type": "Date",
+          "iso": "2024-11-21T08:00:00.000Z"
+        },
+        "data": {
+          "affectedService": "Account access"
+        },
+        "type": "downtime"
+      },
+      {
+        "startDate": {
+          "__type": "Date",
+          "iso": "2024-10-14T05:30:00.000Z"
+        },
+        "endDate": {
+          "__type": "Date",
+          "iso": "2024-10-14T09:15:00.000Z"
+        },
+        "data": {
+          "affectedService": "Transaction history"
+        },
+        "type": "downtime"
+      },
+      {
+        "startDate": {
+          "__type": "Date",
+          "iso": "2024-10-06T23:00:00.000Z"
+        },
+        "endDate": {
+          "__type": "Date",
+          "iso": "2024-10-07T03:00:00.000Z"
+        },
+        "data": {
+          "affectedService": "Fund transfers"
+        },
+        "type": "downtime"
+      }
+
 ]
