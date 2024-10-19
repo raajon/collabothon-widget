@@ -2,7 +2,6 @@ import React from "react";
 import type { CSSProperties } from "react";
 import {
   EventType,
-  LoanScheduleProps,
   UniversalDetailProps,
 } from "../../../lib/types";
 import type { CollapseProps } from "antd";
@@ -26,10 +25,10 @@ const UtmWidgetList = ({ data }: Props) => {
     borderLeftStyle: "solid",
   };
 
-  const getProperComponent = (key: string, details: UniversalDetailProps) => {
+  const getProperComponent = (key: string, details: UniversalDetailProps, startTime: string, endTime: string) => {
     switch (key) {
       case "downtime":
-        return <DonwtimeDetails data={details} />;
+        return <DonwtimeDetails data={details} startTime={startTime} endTime={endTime}/>;
 
       case "loanSchedule":
         return <LoanScheduleDetails data={details} />;
@@ -38,13 +37,13 @@ const UtmWidgetList = ({ data }: Props) => {
         return <ImportantDeadlinesDetails data={details} />;
 
       case "custom":
-        return <CustomDetails data={details} />;
+        return <CustomDetails data={details} startTime={startTime} endTime={endTime} />;
 
       case "standingOrder":
         return <StandingOrderDetails data={details} />;
 
       case "appointment":
-        return <AppointmentDetails data={details} />;
+        return <AppointmentDetails data={details} startTime={startTime} endTime={endTime} />;
 
       default:
         <p>No details.</p>;
@@ -57,7 +56,7 @@ const UtmWidgetList = ({ data }: Props) => {
     data.map((item, index) => ({
       key: index,
       label: `${dayjs(item.startDate).format('DD-MM-YYYY')} ${item.title}`,
-      children: getProperComponent(item.type, item.data),
+      children: getProperComponent(item.type, item.data, dayjs(item.startDate).format('HH:mm'), dayjs(item.endDate).format('HH:mm')),
       style: { ...panelStyle, borderLeftColor: getItemStyle(item.type) },
     }));
 

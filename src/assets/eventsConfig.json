@@ -57,7 +57,7 @@
             "iso": "2024-11-05T15:00:00.000Z"
         },
         "data": {
-            "description": "TBD"
+            "description": "Budget Planning for the next year. Including projects described in the document NextYearProjects."
         },
         "type": "custom",
         "title": "Budget Planning Meeting"
@@ -72,7 +72,7 @@
             "iso": "2024-10-14T12:45:00.000Z"
         },
         "data": {
-            "description": "TBD"
+            "description": "There will be a discussion about last danger situation at production which casue high amount loss."
         },
         "type": "custom",
         "title": "Crisis Management Planning Session"
@@ -87,7 +87,7 @@
             "iso": "2024-11-07T12:00:00.000Z"
         },
         "data": {
-            "description": "TBD"
+            "description": "Budget Planning for incoming quarter."
         },
         "type": "custom",
         "title": "Budget Planning Meeting"
@@ -102,7 +102,7 @@
             "iso": "2024-12-10T13:00:00.000Z"
         },
         "data": {
-            "description": "TBD"
+            "description": "Meeting with analiticts from external advisory company."
         },
         "type": "custom",
         "title": "Industry Trends Analysis Meeting"
@@ -117,10 +117,10 @@
             "iso": "2024-12-01T10:00:00.000Z"
         },
         "data": {
-            "description": "TBD"
+            "description": "Downtime of Payments system because of planned updates."
         },
         "type": "downtime",
-        "title": "Payments"
+        "title": "Payments unavailibility"
     },
     {
         "startDate": {
@@ -132,10 +132,10 @@
             "iso": "2024-11-12T21:00:00.000Z"
         },
         "data": {
-            "description": "TBD"
+            "description": "Website Access will be unavailable becasue of maintaining procedures."
         },
         "type": "downtime",
-        "title": "Website Access"
+        "title": "Website Access unavailibility"
     },
     {
         "startDate": {
@@ -147,10 +147,10 @@
             "iso": "2024-11-21T08:00:00.000Z"
         },
         "data": {
-            "description": "TBD"
+            "description": "Account Access will be unavailable becasue of maintaining procedures."
         },
         "type": "downtime",
-        "title": "Account access"
+        "title": "Accounts access unavailibility"
     },
     {
         "startDate": {
@@ -162,10 +162,10 @@
             "iso": "2024-10-14T09:15:00.000Z"
         },
         "data": {
-            "description": "TBD"
+            "description": "Transaction history will be temporary unavailable becasue of data validation scanning."
         },
         "type": "downtime",
-        "title": "Transaction history"
+        "title": "Transaction history unavailibility"
     },
     {
         "startDate": {
@@ -177,10 +177,10 @@
             "iso": "2024-10-07T03:00:00.000Z"
         },
         "data": {
-            "description": "TBD"
+            "description": "Fund transfers will be unavailable becasue of maintaining procedures."
         },
         "type": "downtime",
-        "title": "Fund transfers"
+        "title": "Fund transfers unavailibility"
     },
     {
         "startDate": {
@@ -188,7 +188,7 @@
             "iso": "2024-12-25T00:00:00.000Z"
         },
         "data": {
-            "description": "TBD"
+            "description": "25th day of the following month is the date by which monthly VAT (JPK_V7M) is sent to the tax office and VAT paid."
         },
         "type": "importantDeadlines",
         "title": "Monthly VAT Settlement (JPK_V7M)"
@@ -199,7 +199,7 @@
             "iso": "2024-09-30T00:00:00.000Z"
         },
         "data": {
-            "description": "TBD"
+            "description": "The tax period is the calendar quarter for the non-Union and Union scheme and the calendar month for the import scheme. The One Stop Shop VAT return (and accompanying payment) is required to be submitted by the end of the month following the tax period covered by the return"
         },
         "type": "importantDeadlines",
         "title": "VAT under the EU VAT OSS Scheme"
@@ -210,7 +210,7 @@
             "iso": "2025-01-25T00:00:00.000Z"
         },
         "data": {
-            "description": "TBD"
+            "description": "25th day of the following month is the date by which monthly VAT (JPK_V7M) is sent to the tax office and VAT paid."
         },
         "type": "importantDeadlines",
         "title": "Monthly VAT Settlement (JPK_V7M)"
@@ -265,7 +265,7 @@
             "iso": "2024-12-31T00:00:00.000Z"
         },
         "data": {
-            "description": "TBD"
+            "description": "The tax period is the calendar quarter for the non-Union and Union scheme and the calendar month for the import scheme. The One Stop Shop VAT return (and accompanying payment) is required to be submitted by the end of the month following the tax period covered by the return"
         },
         "type": "importantDeadlines",
         "title": "VAT under the EU VAT OSS Scheme"
@@ -276,7 +276,7 @@
             "iso": "2024-10-25T00:00:00.000Z"
         },
         "data": {
-            "description": "TBD"
+            "description": "25th day of the following month is the date by which monthly VAT (JPK_V7M) is sent to the tax office and VAT paid."
         },
         "type": "importantDeadlines",
         "title": "Monthly VAT Settlement (JPK_V7M)"
@@ -287,7 +287,7 @@
             "iso": "2024-11-25T00:00:00.000Z"
         },
         "data": {
-            "description": "TBD"
+            "description": "25th day of the following month is the date by which monthly VAT (JPK_V7M) is sent to the tax office and VAT paid."
         },
         "type": "importantDeadlines",
         "title": "Monthly VAT Settlement (JPK_V7M)"
