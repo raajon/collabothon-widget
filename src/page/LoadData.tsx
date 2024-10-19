@@ -63,7 +63,6 @@ const LoadData = () =>{
 
     return(
         <>
-            <div><pre>{JSON.stringify(data, null, 2)}</pre></div>
             <Radio.Group>
                 <Radio.Button onClick={() => getData("Dashboard")}>show Dashboards server</Radio.Button>
                 <Radio.Button onClick={() => putData("Dashboard")}>put Dashboards from file</Radio.Button>
@@ -72,6 +71,7 @@ const LoadData = () =>{
                 <Radio.Button onClick={() => putData("Event")}>put Events from file</Radio.Button>
                 <Radio.Button onClick={() => removeData("Event")}>remove Events server</Radio.Button>
             </Radio.Group>
+            <div><pre>{JSON.stringify(data, null, 2)}</pre></div>
         </>
     )
 }

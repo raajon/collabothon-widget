@@ -105,73 +105,536 @@
     },
     {
         "startDate": {
-          "__type": "Date",
-          "iso": "2024-12-01T06:00:00.000Z"
+            "__type": "Date",
+            "iso": "2024-12-01T06:00:00.000Z"
         },
         "endDate": {
-          "__type": "Date",
-          "iso": "2024-12-01T10:00:00.000Z"
+            "__type": "Date",
+            "iso": "2024-12-01T10:00:00.000Z"
         },
         "data": {
-          "affectedService": "Payments"
+            "title": "Payments"
         },
         "type": "downtime"
-      },
-      {
+    },
+    {
         "startDate": {
-          "__type": "Date",
-          "iso": "2024-11-12T19:00:00.000Z"
+            "__type": "Date",
+            "iso": "2024-11-12T19:00:00.000Z"
         },
         "endDate": {
-          "__type": "Date",
-          "iso": "2024-11-12T21:00:00.000Z"
+            "__type": "Date",
+            "iso": "2024-11-12T21:00:00.000Z"
         },
         "data": {
-          "affectedService": "Website Access"
+            "title": "Website Access"
         },
         "type": "downtime"
-      },
-      {
+    },
+    {
         "startDate": {
-          "__type": "Date",
-          "iso": "2024-11-20T08:00:00.000Z"
+            "__type": "Date",
+            "iso": "2024-11-20T08:00:00.000Z"
         },
         "endDate": {
-          "__type": "Date",
-          "iso": "2024-11-21T08:00:00.000Z"
+            "__type": "Date",
+            "iso": "2024-11-21T08:00:00.000Z"
         },
         "data": {
-          "affectedService": "Account access"
+            "title": "Account access"
         },
         "type": "downtime"
-      },
-      {
+    },
+    {
         "startDate": {
-          "__type": "Date",
-          "iso": "2024-10-14T05:30:00.000Z"
+            "__type": "Date",
+            "iso": "2024-10-14T05:30:00.000Z"
         },
         "endDate": {
-          "__type": "Date",
-          "iso": "2024-10-14T09:15:00.000Z"
+            "__type": "Date",
+            "iso": "2024-10-14T09:15:00.000Z"
         },
         "data": {
-          "affectedService": "Transaction history"
+            "title": "Transaction history"
         },
         "type": "downtime"
-      },
-      {
+    },
+    {
         "startDate": {
-          "__type": "Date",
-          "iso": "2024-10-06T23:00:00.000Z"
+            "__type": "Date",
+            "iso": "2024-10-06T23:00:00.000Z"
         },
         "endDate": {
-          "__type": "Date",
-          "iso": "2024-10-07T03:00:00.000Z"
+            "__type": "Date",
+            "iso": "2024-10-07T03:00:00.000Z"
         },
         "data": {
-          "affectedService": "Fund transfers"
+            "title": "Fund transfers"
         },
         "type": "downtime"
-      }
-
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-12-25T00:00:00.000Z"
+        },
+        "data": {
+            "title": "Monthly VAT Settlement (JPK_V7M)"
+        },
+        "type": "importantDeadlines"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-09-30T00:00:00.000Z"
+        },
+        "data": {
+            "title": "VAT under the EU VAT OSS Scheme"
+        },
+        "type": "importantDeadlines"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2025-01-25T00:00:00.000Z"
+        },
+        "data": {
+            "title": "Monthly VAT Settlement (JPK_V7M)"
+        },
+        "type": "importantDeadlines"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-12-31T00:00:00.000Z"
+        },
+        "data": {
+            "title": "VAT under the VAT IOSS Import Procedure"
+        },
+        "description": "Last day of the month for the previous month",
+        "type": "importantDeadlines"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-09-30T00:00:00.000Z"
+        },
+        "data": {
+            "title": "VAT under the VAT IOSS Import Procedure",
+            "description": "Last day of the month for the previous month"
+        },
+        "type": "importantDeadlines"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-10-31T00:00:00.000Z"
+        },
+        "data": {
+            "title": "VAT under the VAT IOSS Import Procedure",
+            "description": "Last day of the month for the previous month"
+        },
+        "type": "importantDeadlines"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-11-30T00:00:00.000Z"
+        },
+        "data": {
+            "title": "VAT under the VAT IOSS Import Procedure",
+            "description": "Last day of the month for the previous month"
+        },
+        "type": "importantDeadlines"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-12-31T00:00:00.000Z"
+        },
+        "data": {
+            "title": "VAT under the EU VAT OSS Scheme"
+        },
+        "type": "importantDeadlines"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-10-25T00:00:00.000Z"
+        },
+        "data": {
+            "title": "Monthly VAT Settlement (JPK_V7M)"
+        },
+        "type": "importantDeadlines"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-11-25T00:00:00.000Z"
+        },
+        "data": {
+            "title": "Monthly VAT Settlement (JPK_V7M)"
+        },
+        "type": "importantDeadlines"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2023-10-02T16:57:00.000Z"
+        },
+        "endDate": {
+            "__type": "Date",
+            "iso": "2033-10-02T16:57:00.000Z"
+        },
+        "data": {
+            "title": "Commercial real estate loan",
+            "number": "16 8959 0001 9344 2345 9096 0099",
+            "currency": "EUR",
+            "total_capital": 2000000,
+            "remaining_capital": 956000
+        },
+        "type": "loan"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2022-10-18T16:55:00.000Z"
+        },
+        "endDate": {
+            "__type": "Date",
+            "iso": "2027-10-18T16:55:56.386Z"
+        },
+        "data": {
+            "title": "Equipment financing loan",
+            "number": "16 8959 0001 9344 4287 9096 1457",
+            "currency": "EUR",
+            "total_capital": 700000,
+            "remaining_capital": 350000
+        },
+        "type": "loan"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2022-01-03T16:52:00.000Z"
+        },
+        "endDate": {
+            "__type": "Date",
+            "iso": "2032-01-02T16:52:00.000Z"
+        },
+        "data": {
+            "title": "Startup loan",
+            "number": "16 8959 0001 9399 4287 9096 1370",
+            "currency": "EUR",
+            "total_capital": 3000000,
+            "remaining_capital": 2785000
+        },
+        "type": "loan"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-11-23T17:04:00.000Z"
+        },
+        "data": {
+            "capital_installement": 3690,
+            "interest_installement": 4115,
+            "loan_number": "16 8959 0001 9344 4287 9096 1457",
+            "currency": "EUR"
+        },
+        "type": "loanSchedule"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-10-21T17:04:00.000Z"
+        },
+        "data": {
+            "capital_installement": 25000,
+            "interest_installement": 35000,
+            "loan_number": "16 8959 0001 9399 4287 9096 1370",
+            "currency": "EUR"
+        },
+        "type": "loanSchedule"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2025-01-21T17:04:00.000Z"
+        },
+        "data": {
+            "capital_installement": 25000,
+            "interest_installement": 35000,
+            "loan_number": "16 8959 0001 9399 4287 9096 1370",
+            "currency": "EUR"
+        },
+        "type": "loanSchedule"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-11-21T17:04:00.000Z"
+        },
+        "data": {
+            "capital_installement": 25000,
+            "interest_installement": 35000,
+            "loan_number": "16 8959 0001 9399 4287 9096 1370",
+            "currency": "EUR"
+        },
+        "type": "loanSchedule"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-12-21T17:04:00.000Z"
+        },
+        "data": {
+            "capital_installement": 25000,
+            "interest_installement": 35000,
+            "loan_number": "16 8959 0001 9399 4287 9096 1370",
+            "currency": "EUR"
+        },
+        "type": "loanSchedule"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2025-01-21T17:04:00.000Z"
+        },
+        "data": {
+            "capital_installement": 3690,
+            "interest_installement": 4115,
+            "loan_number": "16 8959 0001 9344 4287 9096 1457",
+            "currency": "EUR"
+        },
+        "type": "loanSchedule"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2025-01-28T17:04:00.000Z"
+        },
+        "data": {
+            "capital_installement": 6789,
+            "interest_installement": 7586,
+            "loan_number": "16 8959 0001 9344 2345 9096 0099",
+            "currency": "EUR"
+        },
+        "type": "loanSchedule"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-10-23T17:04:00.000Z"
+        },
+        "data": {
+            "capital_installement": 3690,
+            "interest_installement": 4115,
+            "loan_number": "16 8959 0001 9344 4287 9096 1457",
+            "currency": "EUR"
+        },
+        "type": "loanSchedule"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-12-28T17:04:00.000Z"
+        },
+        "data": {
+            "capital_installement": 6789,
+            "interest_installement": 7586,
+            "loan_number": "16 8959 0001 9344 2345 9096 0099",
+            "currency": "EUR"
+        },
+        "type": "loanSchedule"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-10-28T17:04:00.000Z"
+        },
+        "data": {
+            "capital_installement": 6789,
+            "interest_installement": 7586,
+            "loan_number": "16 8959 0001 9344 2345 9096 0099",
+            "currency": "EUR"
+        },
+        "type": "loanSchedule"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-12-23T17:04:00.000Z"
+        },
+        "data": {
+            "capital_installement": 3690,
+            "interest_installement": 4115,
+            "loan_number": "16 8959 0001 9344 4287 9096 1457",
+            "currency": "EUR"
+        },
+        "type": "loanSchedule"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-11-28T17:04:00.000Z"
+        },
+        "data": {
+            "capital_installement": 6789,
+            "interest_installement": 7586,
+            "loan_number": "16 8959 0001 9344 2345 9096 0099",
+            "currency": "EUR"
+        },
+        "type": "loanSchedule"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-12-30T16:34:00.000Z"
+        },
+        "data": {
+            "title": "Rent Payment Office 2",
+            "amount": 360.45,
+            "account_to": "20 8649 1015 8157 8526 5346 6879",
+            "receiver": "Rental Agency B&D",
+            "currency": "USD",
+            "account_from": "94 9150 0009 8178 4212 6029 3024"
+        },
+        "type": "standingOrder"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-11-28T16:33:00.000Z"
+        },
+        "data": {
+            "title": "Consulting Fees – Project X",
+            "amount": 1700,
+            "account_to": "69 9263 1065 0625 5004 0897 7576",
+            "receiver": "Advertising agency",
+            "currency": "EUR",
+            "account_from": "94 9150 0009 1946 6058 9058 9151"
+        },
+        "type": "standingOrder"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-10-28T16:28:00.000Z"
+        },
+        "data": {
+            "title": "Consulting Fees – Project X",
+            "amount": 1700,
+            "account_to": "69 9263 1065 0625 5004 0897 7576",
+            "receiver": "Advertising agency",
+            "account_from": "94 9150 0009 1946 6058 9058 9151",
+            "currency": "EUR"
+        },
+        "type": "standingOrder"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-11-13T16:39:00.000Z"
+        },
+        "data": {
+            "title": "Car Leasing BMW",
+            "amount": 6000,
+            "account_to": "28 9681 1025 4971 4351 2756 5267",
+            "receiver": "BMW Leasing Company",
+            "account_from": "94 9150 0009 1946 6058 9058 9151",
+            "currency": "EUR"
+        },
+        "type": "standingOrder"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-11-07T16:30:00.000Z"
+        },
+        "data": {
+            "title": "Rent Payment Office 1",
+            "amount": 10000,
+            "account_to": "21 1500 1126 8096 7546 1189 4118",
+            "receiver": "BIG OFFICE Comapny",
+            "currency": "EUR",
+            "account_from": "94 9150 0009 1946 6058 9058 9151"
+        },
+        "type": "standingOrder"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-12-07T16:30:00.000Z"
+        },
+        "data": {
+            "title": "Rent Payment Office 1",
+            "amount": 10000,
+            "account_to": "21 1500 1126 8096 7546 1189 4118",
+            "receiver": "BIG OFFICE Comapny",
+            "currency": "EUR",
+            "account_from": "94 9150 0009 1946 6058 9058 9151"
+        },
+        "type": "standingOrder"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-10-30T16:25:00.000Z"
+        },
+        "data": {
+            "title": "Rent Payment Office 2",
+            "amount": 360.45,
+            "account_from": "94 9150 0009 8178 4212 6029 3024",
+            "currency": "USD",
+            "account_to": "20 8649 1015 8157 8526 5346 6879",
+            "receiver": "Rental Agency B&D"
+        },
+        "type": "standingOrder"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-12-28T16:33:00.000Z"
+        },
+        "data": {
+            "title": "Consulting Fees – Project X",
+            "amount": 1700,
+            "account_to": "69 9263 1065 0625 5004 0897 7576",
+            "receiver": "Advertising agency",
+            "currency": "EUR",
+            "account_from": "94 9150 0009 1946 6058 9058 9151"
+        },
+        "type": "standingOrder"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-12-13T16:39:00.000Z"
+        },
+        "data": {
+            "title": "Car Leasing BMW",
+            "amount": 6000,
+            "account_to": "28 9681 1025 4971 4351 2756 5267",
+            "receiver": "BMW Leasing Company",
+            "account_from": "94 9150 0009 1946 6058 9058 9151",
+            "currency": "EUR"
+        },
+        "type": "standingOrder"
+    },
+    {
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-11-30T16:34:00.000Z"
+        },
+        "data": {
+            "title": "Rent Payment Office 2",
+            "amount": 360.45,
+            "account_to": "20 8649 1015 8157 8526 5346 6879",
+            "receiver": "Rental Agency B&D",
+            "currency": "USD",
+            "account_from": "94 9150 0009 8178 4212 6029 3024"
+        },
+        "type": "standingOrder"
+    }
 ]
