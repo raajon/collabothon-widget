@@ -44,7 +44,7 @@ const UtmWidgetCalendar = ({data}:Props) =>{
     return(
       <>
         <Calendar cellRender={cellRender} headerRender={header} onSelect={(newValue: Dayjs)=>setModalDate(newValue)}/>
-        <Modal title="Basic Modal" open={!!modalDate} onOk={()=>setModalDate(null)} onCancel={()=>setModalDate(null)}>
+        <Modal title={modalDate?.format('DD-MM-YYYY')} open={!!modalDate} footer={()=><></>} onCancel={()=>setModalDate(null)}>
           <UtmWidgetList data={filterEvents(modalDate)} />
         </Modal>
       </>
