@@ -1,9 +1,10 @@
-import { Badge, BadgeProps, Calendar, CalendarProps } from 'antd';
+import { Badge, BadgeProps, Calendar, CalendarProps, Row, Col } from 'antd';
 import React, { useEffect, useState } from 'react';
 import type { Dayjs } from 'dayjs';
 import UtmWidgetCalendar from './atoms/UtmWidgetCalendar';
 import axios from 'axios';
 import { EventType } from '../../lib/types';
+import UtmWidgetList from './atoms/UtmWidgetList';
 
 
 const UtmWidget = () =>{
@@ -30,7 +31,14 @@ const UtmWidget = () =>{
 
 
     return(
-        <UtmWidgetCalendar data={data}/>
+        <Row justify="space-between">
+          <Col span={11}>
+            <UtmWidgetCalendar data={data}/>
+          </Col>
+          <Col span={11}>
+            <UtmWidgetList data={data}/>
+          </Col>
+        </Row>
     )
 }
 

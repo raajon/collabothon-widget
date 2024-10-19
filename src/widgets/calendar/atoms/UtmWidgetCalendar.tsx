@@ -3,22 +3,9 @@ import React from 'react';
 import type { Dayjs } from 'dayjs';
 import { EventType } from '../../../lib/types';
 import colors from "../../../colors"
+import getItemStyle from '../../../utils/getItemStyle';
 
 const UtmWidgetCalendar = ({data}:Props) =>{
-
-    const getItemStyle = (type: string) => {
-        switch (type) {
-          case 'Downtime':
-            return colors.harvest;
-          case 'Custom':
-            return colors.mint;
-          case 'Appointment':
-            return colors.warning;
-          default:
-            return colors.petrol
-        }
-    };
-      
 
     const dateCellRender = (value: Dayjs) => {
         const listData = data.filter(d=>
