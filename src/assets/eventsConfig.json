@@ -3,7 +3,7 @@
         "type": "appointment",
         "data": {
             "appointmentWIth": "Mark Lee",
-            "place": "Kaiserstra\u00dfe 74, 63065 Offenbach am Main"
+            "place": "Roßmarkt 14, 60311 Frankfurt am Main"
         },
         "startDate": {
             "__type": "Date",
@@ -16,7 +16,7 @@
         "type": "appointment",
         "data": {
             "appointmentWIth": "Sarah Johnson",
-            "place": "Zeil 53, 60313 Frankfurt am Main"
+            "place": "Zeil 53, 60311 Frankfurt am Main"
         },
         "startDate": {
             "__type": "Date",
@@ -28,7 +28,7 @@
     {
         "type": "appointment",
         "data": {
-            "place": "Ro\u00dfmarkt 14, 60311 Frankfurt am Main",
+            "place": "Opernplatz 6, 60313 Frankfurt am Main",
             "appointmentWIth": "Christopher Lewis"
         },
         "startDate": {
@@ -41,7 +41,7 @@
     {
         "type": "appointment",
         "data": {
-            "place": "Ro\u00dfmarkt 14, 60311 Frankfurt am Main",
+            "place": "Gräfstr. 85, 60487 Frankfurt am Main",
             "appointmentWIth": "John Doe"
         },
         "startDate": {
