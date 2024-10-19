@@ -64,7 +64,6 @@ const UtmWidgetList = ({ data }: Props) => {
   return (
     <Collapse
       items={items(panelStyle)}
-      defaultActiveKey={["1"]}
       onChange={onChange}
     />
   );
