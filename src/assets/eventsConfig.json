@@ -1,0 +1,50 @@
+[
+    {
+        "type": "Appointment",
+        "data": {
+            "appointmentWIth": "Mark Lee",
+            "place": "Kaiserstraße 74, 63065 Offenbach am Main",
+            "title": "Trade Finance Consultation"
+        },
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-11-15T14:00:00.000Z"
+        }
+    },
+    {
+        "type": "Appointment",
+        "data": {
+            "title": "Business Account Review",
+            "appointmentWIth": "Sarah Johnson",
+            "place": "Zeil 53, 60313 Frankfurt am Main"
+        },
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-10-31T09:00:00.000Z"
+        }
+    },
+    {
+        "type": "Appointment",
+        "data": {
+            "title": "Strategic Planning Session",
+            "place": "Roßmarkt 14, 60311 Frankfurt am Main",
+            "appointmentWIth": "Christopher Lewis"
+        },
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-11-25T12:00:00.000Z"
+        }
+    },
+    {
+        "type": "Appointment",
+        "data": {
+            "place": "Roßmarkt 14, 60311 Frankfurt am Main",
+            "title": "Commercial Loan Consultation",
+            "appointmentWIth": "John Doe"
+        },
+        "startDate": {
+            "__type": "Date",
+            "iso": "2024-10-07T10:30:00.000Z"
+        }
+    }
+]

@@ -1,57 +1,76 @@
 import { Button, Radio } from 'antd';
 import React, { useState } from 'react';
 import dashboards from '../assets/dashbordsConfig.json'
+import events from '../assets/eventsConfig.json'
 import axios from 'axios';
 
 const LoadData = () =>{
 
     const [data, setData] = useState();
+    const jsonFiles = {
+        dashboards,
+        events,
+    }
 
-    const getDashboards = async() =>{
-        const dashboards = await axios.get("/parse/classes/Dashboard", {
+    const getJsonByName = (name: string) => {
+        if(name==="Dashboard") {
+            return jsonFiles.dashboards;
+        }
+        else {
+            return jsonFiles.events;
+        }
+    }
+
+    const getData = async(table : string) =>{
+        const fetchedData = await axios.get(`/parse/classes/${table}`, {
             headers: {
             'X-Parse-Application-Id': "collabothon",
             },
         });
-        setData(dashboards.data.results);
+        setData(fetchedData.data.results);
     }
 
-    const putDashboards = async() =>{
-        for (const d of dashboards) {
-            await axios.post("/parse/classes/Dashboard/", d, {
+    const putData = async(table: string) =>{
+        const json = getJsonByName(table);
+        console.log(`put${table}`, json)
+        for (const obj of json) {
+            await axios.post(`/parse/classes/${table}`, obj, {
                 headers: {
                 'X-Parse-Application-Id': "collabothon",
                 },
             });
 
         }
-        await getDashboards();
+        await getData(table);
     }
     
-    const removeDashboards = async() =>{
-        const dashboards = await axios.get("/parse/classes/Dashboard", {
+    const removeData = async(table : string) => {
+        const fetchedData = await axios.get(`/parse/classes/${table}`, {
             headers: {
             'X-Parse-Application-Id': "collabothon",
             },
         });
-        for (const d of dashboards.data.results) {
-            await axios.delete("/parse/classes/Dashboard/"+ d.objectId, {
+        for (const obj of fetchedData.data.results) {
+            await axios.delete(`/parse/classes/${table}`+ obj.objectId, {
                 headers: {
                 'X-Parse-Application-Id': "collabothon",
                 },
             });
 
         }
-        await getDashboards();
+        await getData(table);
     }
 
     return(
         <>
             <div><pre>{JSON.stringify(data, null, 2)}</pre></div>
             <Radio.Group>
-                <Radio.Button onClick={getDashboards}>show Dashboards server</Radio.Button>
-                <Radio.Button onClick={putDashboards}>put Dashboards from file</Radio.Button>
-                <Radio.Button onClick={removeDashboards}>remove Dashboards server</Radio.Button>
+                <Radio.Button onClick={() => getData("Dashboard")}>show Dashboards server</Radio.Button>
+                <Radio.Button onClick={() => putData("Dashboard")}>put Dashboards from file</Radio.Button>
+                <Radio.Button onClick={() => removeData("Dashboard")}>remove Dashboards server</Radio.Button>
+                <Radio.Button onClick={() => getData("Event")}>show Events server</Radio.Button>
+                <Radio.Button onClick={() => putData("Event")}>put Events from file</Radio.Button>
+                <Radio.Button onClick={() => removeData("Event")}>remove Events server</Radio.Button>
             </Radio.Group>
         </>
     )
