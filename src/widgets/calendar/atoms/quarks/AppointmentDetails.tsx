@@ -1,10 +1,13 @@
 import { Button } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppointmentProps } from "../../../../lib/types";
-import { Col, Row, Statistic } from "antd";
+import { Col, Row, Statistic, Modal } from "antd";
+import BranchDetails from "./BranchDetails";
 
 const AppointmentDetails = ({ data, startTime, endTime }: Props) => {
+  const [branchSearch, setBranchSearch] = useState<string>("");
+
   const navigate = useNavigate();
 
   return (
@@ -27,7 +30,15 @@ const AppointmentDetails = ({ data, startTime, endTime }: Props) => {
           <Statistic title="Place" value={data.place} valueStyle={{ fontSize: '20px' }} />
         </Col>
       </Row>
-      <Button onClick={() => navigate("/onet.pl")}>onet</Button>
+      <Button onClick={()=>setBranchSearch(data.place)}>Show details</Button>
+
+      <Modal 
+          open={!!branchSearch} 
+          footer={()=><></>} 
+          onCancel={()=>setBranchSearch("")}
+        >
+          <BranchDetails address={data.place}/>
+      </Modal>
     </>
   );
 };
