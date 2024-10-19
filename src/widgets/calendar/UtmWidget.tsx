@@ -50,21 +50,79 @@ const UtmWidget = ({widgetConfig}:Props) => {
       );
   };
 
+  const getWidgetDesign = () =>{
+    if(widgetConfig.mode === "0"){
+      return(
+        <>
+          <UtmWidgetFilter
+            types={types}
+            selectedTypes={selectedTypes}
+            setSelectedTypes={setSelectedTypes}
+          />
+          <Row justify='space-between'>
+            <Col span={17}>
+              <UtmWidgetCalendar data={filteredData} setSelectedDate={setSelectedDate}/>
+            </Col>
+            <Col span={6}>
+              <UtmWidgetList data={filteredData.filter(d=>d.startDate.getMonth() === selectedDate.month())} />
+            </Col>
+          </Row>
+        </>
+
+      )
+    }
+    else if(widgetConfig.mode === "1"){
+      return(
+        <>
+          <UtmWidgetFilter
+            types={types}
+            selectedTypes={selectedTypes}
+            setSelectedTypes={setSelectedTypes}
+          />
+          <Row justify='space-between'>
+            <Col span={24}>
+              <UtmWidgetCalendar data={filteredData} setSelectedDate={setSelectedDate}/>
+            </Col>
+          </Row>
+        </>
+
+      )
+    }
+    else if(widgetConfig.mode === "2"){
+      return(
+        <>
+          <UtmWidgetFilter
+            types={types}
+            selectedTypes={selectedTypes}
+            setSelectedTypes={setSelectedTypes}
+          />
+          <Row justify='space-between'>
+            <Col span={24}>
+              <UtmWidgetCalendar data={filteredData} setSelectedDate={setSelectedDate} small={true}/>
+            </Col>
+          </Row>
+        </>
+
+      )
+    }
+    else if(widgetConfig.mode === "3"){
+      return(
+        <>
+          <UtmWidgetFilter
+            types={types}
+            selectedTypes={selectedTypes}
+            setSelectedTypes={setSelectedTypes}
+          />
+          <UtmWidgetList data={filteredData.filter(d=>d.startDate.getMonth() === selectedDate.month())} />
+        </>
+
+      )
+    }
+  }
+
   return (
     <>
-      <UtmWidgetFilter
-        types={types}
-        selectedTypes={selectedTypes}
-        setSelectedTypes={setSelectedTypes}
-      />
-      <Row justify='space-between'>
-        <Col span={17}>
-          <UtmWidgetCalendar data={filteredData} setSelectedDate={setSelectedDate}/>
-        </Col>
-        <Col span={6}>
-          <UtmWidgetList data={filteredData.filter(d=>d.startDate.getMonth() === selectedDate.month())} />
-        </Col>
-      </Row>
+      {getWidgetDesign()}
     </>
   );
 };

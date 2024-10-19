@@ -5,7 +5,8 @@
             [
                 {
                     "type":"calendar",
-                    "title":"Kalendarz ogolny"
+                    "title":"Full options",
+                    "mode": "0"
                 }
             ]
         ]
@@ -13,11 +14,22 @@
     {
         "title":"Dashboard 1",
         "widgets":[
-            [],
+            [
+                {
+                    "type":"calendar",
+                    "title":"Small",
+                    "mode": "2"
+                }
+            ],
             [
                 {
                     "type":"mock",
-                    "title":"Wykres 1"
+                    "title":"Plot 1",
+                    "mode": "1"
+                },{
+                    "type":"mock",
+                    "title":"Virtual assistant",
+                    "mode": "0"
                 }
             ]
         ]

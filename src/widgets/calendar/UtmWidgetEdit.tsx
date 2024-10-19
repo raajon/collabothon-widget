@@ -22,7 +22,7 @@ const UtmWidgetEdit = ({widgetConfig, setWidgetConfigEdited}:Props) =>{
                     <Radio.Button value="0">Calendar + List</Radio.Button>
                     <Radio.Button value="1">Big Calendar</Radio.Button>
                     <Radio.Button value="2">Small Calendar</Radio.Button>
-                    <Radio.Button value="2">Just List</Radio.Button>
+                    <Radio.Button value="3">Just List</Radio.Button>
                 </Radio.Group>
             </div>
         </>

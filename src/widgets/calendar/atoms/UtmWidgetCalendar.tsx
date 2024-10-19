@@ -5,7 +5,7 @@ import { EventType } from '../../../lib/types';
 import getItemStyle from '../../../utils/getItemStyle';
 import UtmWidgetList from './UtmWidgetList';
 
-const UtmWidgetCalendar = ({data, setSelectedDate}:Props) =>{
+const UtmWidgetCalendar = ({data, small=false, setSelectedDate}:Props) =>{
 
     const [modalDate, setModalDate] = useState(null as Dayjs | null);
 
@@ -83,6 +83,7 @@ const UtmWidgetCalendar = ({data, setSelectedDate}:Props) =>{
 
 interface Props{
     data: EventType[]
+    small?: boolean
     setSelectedDate: Function
 }
 
