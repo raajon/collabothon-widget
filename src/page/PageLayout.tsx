@@ -41,7 +41,7 @@ const PageLayout = () =>{
     return (
         <Layout style={{width:'100%', minHeight:'100%', position:'absolute'}}>
             <Header style={{ display: 'flex', alignItems: 'center' }}>
-                <img src="https://companieslogo.com/img/orig/CBK.F_BIG.D-1ea666d3.png?t=1720244491" className="demo-logo" style={{maxWidth: "150px", marginRight:"25px"}}/>
+                <img src="https://companieslogo.com/img/orig/CBK.F_BIG.D-1ea666d3.png?t=1720244491" alt="logo" className="demo-logo" style={{maxWidth: "150px", marginRight:"25px"}}/>
                 <Menu
                     theme="dark"
                     mode="horizontal"

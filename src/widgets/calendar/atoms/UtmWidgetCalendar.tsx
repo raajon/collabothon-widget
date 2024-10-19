@@ -1,10 +1,9 @@
-import { Badge, BadgeProps, CalendarProps, Calendar, Modal, DatePicker, Col, Row, Flex } from 'antd';
+import { Badge, BadgeProps, CalendarProps, Calendar, Modal, DatePicker, Flex } from 'antd';
 import React, { useState } from 'react';
 import type { Dayjs } from 'dayjs';
 import { EventType } from '../../../lib/types';
 import getItemStyle from '../../../utils/getItemStyle';
 import UtmWidgetList from './UtmWidgetList';
-import { HeaderRender } from 'antd/es/calendar/generateCalendar';
 
 const UtmWidgetCalendar = ({data, setSelectedDate}:Props) =>{
 
@@ -26,7 +25,7 @@ const UtmWidgetCalendar = ({data, setSelectedDate}:Props) =>{
         return (
           <ul className="events">
             {filterEvents(value).map((item: EventType, i) => (
-              <li key={item.title}>
+              <li key={i}>
                 <Badge 
                   color={getItemStyle(item.type)} 
                   status={item.type as BadgeProps['status']} 

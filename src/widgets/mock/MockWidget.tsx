@@ -5,7 +5,6 @@ import { WidgetType } from '../../lib/types';
 import { Flex } from 'antd';
 
 const MockWidget = ({widgetConfig}: Props) =>{
-    console.log(widgetConfig)
 
     let img = mobius;
     if (widgetConfig.mode === "0"){
@@ -18,7 +17,7 @@ const MockWidget = ({widgetConfig}: Props) =>{
 
     return(
         <Flex justify={'center'} align={'center'}>
-            <img src={img}/>
+            <img src={img} alt="widget"/>
         </Flex>
     )
 }

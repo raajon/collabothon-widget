@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { Checkbox } from 'antd';
-import type { CheckboxProps } from 'antd';
-import { EventType } from '../../../lib/types';
+import React from 'react';
 import getItemStyle from '../../../utils/getItemStyle';
 
 const UtmWidgetFilter = ({ types, selectedTypes, setSelectedTypes }: Props) => {

@@ -1,4 +1,4 @@
-import { Button, Radio } from "antd";
+import { Radio } from "antd";
 import React, { useState } from "react";
 import dashboards from "../assets/dashbordsConfig.json";
 import events from "../assets/eventsConfig.json";

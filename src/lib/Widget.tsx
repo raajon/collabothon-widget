@@ -11,8 +11,7 @@ const Widget = ({widgetConfig, i, j, update}:Props) =>{
 
     const [widgetConfigEdited, setWidgetConfigEdited] = useState(widgetConfig)
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const {type, title, mode} = widgetConfig;
-    console.log(type, title, mode)
+    const {type, title} = widgetConfig;
 
     const widget = useMemo(()=>{
         if(type==='calendar'){

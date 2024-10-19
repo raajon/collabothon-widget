@@ -1,12 +1,11 @@
 import React from 'react';
 import { ConfigProvider } from 'antd';
-import { BrowserRouter, createBrowserRouter, createRoutesFromElements, Route, RouterProvider, Routes } from 'react-router-dom';
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 import PageLayout, { menuLoader } from './page/PageLayout';
 import Dashboard, { dashboardLoader } from './page/Dashboard';
 import Sandbox from './page/Sandbox';
 import LoadData from './page/LoadData';
 import colors from './colors';
-import CustomDetails from './widgets/calendar/atoms/quarks/CustomDetails';
 
 const App: React.FC = () =>{
   const router = createBrowserRouter(

@@ -1,6 +1,5 @@
-import { Badge, BadgeProps, Calendar, CalendarProps, Row, Col } from 'antd';
+import { Row, Col } from 'antd';
 import React, { useEffect, useState } from 'react';
-import type { Dayjs } from 'dayjs';
 import UtmWidgetCalendar from './atoms/UtmWidgetCalendar';
 import axios from 'axios';
 import { EventType, WidgetType } from '../../lib/types';
@@ -14,8 +13,6 @@ const UtmWidget = ({widgetConfig}:Props) => {
   const [types, setTypes] = useState<string[]>([]);
   const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
   const [selectedDate, setSelectedDate] = useState(dayjs())
-
-  console.log(selectedDate);
 
   useEffect(() => {
     axios

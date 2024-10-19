@@ -4,7 +4,7 @@ import { SettingFilled } from '@ant-design/icons';
 import logoPng from '../assets/logo.png';
 
 const WidgetBorder = ({title, children, logo, showEdit}: Props) =>{
-    const logoImg = <img src={logoPng} style={{height: "20px", marginRight: "20px"}}/>
+    const logoImg = <img src={logoPng} style={{height: "20px", marginRight: "20px"}} alt="widget"/>
     const titleObj = <>{logo && logoImg} {title}</>
 
     return (
