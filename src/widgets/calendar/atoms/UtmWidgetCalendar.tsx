@@ -2,24 +2,9 @@ import { Badge, BadgeProps, CalendarProps, Calendar } from 'antd';
 import React from 'react';
 import type { Dayjs } from 'dayjs';
 import { EventType } from '../../../lib/types';
-import colors from "../../../colors"
-import classes from "./UtmWidgetCalendar.module.css"
+import getItemStyle from '../../../utils/getItemStyle';
 
 const UtmWidgetCalendar = ({data}:Props) =>{
-
-    const getItemStyle = (type: string) => {
-        switch (type) {
-          case 'downtime':
-            return colors.harvest;
-          case 'custom':
-            return colors.mint;
-          case 'appointment':
-            return colors.warning;
-          default:
-            return colors.petrol
-        }
-    };
-      
 
     const dateCellRender = (value: Dayjs) => {
         const listData = data.filter(d=>
