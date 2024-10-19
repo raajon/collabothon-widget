@@ -5,41 +5,64 @@ import UtmWidgetCalendar from './atoms/UtmWidgetCalendar';
 import axios from 'axios';
 import { EventType } from '../../lib/types';
 import UtmWidgetList from './atoms/UtmWidgetList';
+import UtmWidgetFilter from './atoms/UtmWidgetFilter';
 
-
-const UtmWidget = () =>{
-
+const UtmWidget = () => {
   const [data, setData] = useState([] as EventType[]);
+  const [filteredData, setFilteredData] = useState([] as EventType[]);
+  const [types, setTypes] = useState<string[]>([]);
+  const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
 
-  useEffect(()=>{
-    axios.get("/parse/classes/Event", {
-      headers: {
-      'X-Parse-Application-Id': "collabothon",
-      },
-    }).then(({data})=>{
-      data.results?.forEach((d:any)=>{
-        d.startDate = new Date(d.startDate.iso)
-        if(d.endDate){
-          d.endDate = new Date(d.endDate.iso)
-        }
+  useEffect(() => {
+    axios
+      .get('/parse/classes/Event', {
+        headers: {
+          'X-Parse-Application-Id': 'collabothon',
+        },
       })
-      setData(data.results);
-    })
-   
-  },[])
+      .then(({ data }) => {
+        data.results?.forEach((d: any) => {
+          d.startDate = new Date(d.startDate.iso);
+          if (d.endDate) {
+            d.endDate = new Date(d.endDate.iso);
+          }
+        });
+        setData(data.results);
+      });
+  }, []);
 
+  useEffect(()=> {
+    setTypes(Array.from(new Set(data.map((item) => item.type))));
+    setSelectedTypes(types);
+  },[data]);
 
+  useEffect(() => {
+    filterData();
+  }, [selectedTypes]); 
 
-    return(
-        <Row justify="space-between">
-          <Col span={11}>
-            <UtmWidgetCalendar data={data}/>
-          </Col>
-          <Col span={11}>
-            <UtmWidgetList data={data}/>
-          </Col>
-        </Row>
-    )
-}
+  const filterData = () => {
+      setFilteredData(
+        data.filter((event) => selectedTypes.includes(event.type))
+      );
+  };
+
+  return (
+    <>
+      <UtmWidgetFilter
+        types={types}
+        selectedTypes={selectedTypes}
+        setSelectedTypes={setSelectedTypes}
+      />
+      <Row justify='space-between'>
+        <Col span={11}>
+          <UtmWidgetCalendar data={filteredData} />
+        </Col>
+        <Col span={11}>
+          <UtmWidgetList data={filteredData} />
+        </Col>
+      </Row>
+    </>
+  );
+};
 
 export default UtmWidget;
