@@ -5,6 +5,7 @@ import PageLayout, { menuLoader } from './page/PageLayout';
 import Dashboard, { dashboardLoader } from './page/Dashboard';
 import Sandbox from './page/Sandbox';
 import LoadData from './page/LoadData';
+import colors from './colors';
 
 const App: React.FC = () =>{
   const router = createBrowserRouter(
@@ -20,7 +21,23 @@ const App: React.FC = () =>{
 
 
   return(
-    <ConfigProvider theme={{ token: { colorPrimary: '#00b96b' } }}>
+    <ConfigProvider theme={{ token: { colorPrimary: colors.petrol },
+    components: {
+      Menu: {
+        darkItemBg: colors.petrol,
+        darkItemSelectedBg: colors.petrolGrad1
+      },
+      Layout: {
+        bodyBg: colors.sand,
+        headerBg: colors.petrol,
+      }, 
+      Calendar: {
+        itemActiveBg: colors.petrolGrad6
+      },
+      Badge: {
+        statusSize: 12
+      }
+    }, }}>
       <RouterProvider router={router} />
     </ConfigProvider>
   )
