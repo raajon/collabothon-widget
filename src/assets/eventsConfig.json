@@ -3,13 +3,14 @@
         "type": "appointment",
         "data": {
             "appointmentWIth": "Mark Lee",
-            "place": "Kaiserstraße 74, 63065 Offenbach am Main"
+            "place": "Kaiserstra\u00dfe 74, 63065 Offenbach am Main"
         },
         "startDate": {
             "__type": "Date",
             "iso": "2024-11-15T14:00:00.000Z"
         },
-        "title": "Trade Finance Consultation"
+        "title": "Trade Finance Consultation",
+        "seen": true
     },
     {
         "type": "appointment",
@@ -21,31 +22,34 @@
             "__type": "Date",
             "iso": "2024-10-31T09:00:00.000Z"
         },
-        "title": "Business Account Review"
+        "title": "Business Account Review",
+        "seen": true
     },
     {
         "type": "appointment",
         "data": {
-            "place": "Roßmarkt 14, 60311 Frankfurt am Main",
+            "place": "Ro\u00dfmarkt 14, 60311 Frankfurt am Main",
             "appointmentWIth": "Christopher Lewis"
         },
         "startDate": {
             "__type": "Date",
             "iso": "2024-11-25T12:00:00.000Z"
         },
-        "title": "Strategic Planning Session"
+        "title": "Strategic Planning Session",
+        "seen": true
     },
     {
         "type": "appointment",
         "data": {
-            "place": "Roßmarkt 14, 60311 Frankfurt am Main",
+            "place": "Ro\u00dfmarkt 14, 60311 Frankfurt am Main",
             "appointmentWIth": "John Doe"
         },
         "startDate": {
             "__type": "Date",
             "iso": "2024-10-07T10:30:00.000Z"
         },
-        "title": "Commercial Loan Consultation"
+        "title": "Commercial Loan Consultation",
+        "seen": true
     },
     {
         "startDate": {
@@ -60,7 +64,8 @@
             "description": "Budget Planning for the next year. Including projects described in the document NextYearProjects."
         },
         "type": "custom",
-        "title": "Budget Planning Meeting"
+        "title": "Budget Planning Meeting",
+        "seen": true
     },
     {
         "startDate": {
@@ -75,7 +80,8 @@
             "description": "There will be a discussion about last danger situation at production which casue high amount loss."
         },
         "type": "custom",
-        "title": "Crisis Management Planning Session"
+        "title": "Crisis Management Planning Session",
+        "seen": true
     },
     {
         "startDate": {
@@ -90,7 +96,8 @@
             "description": "Budget Planning for incoming quarter."
         },
         "type": "custom",
-        "title": "Budget Planning Meeting"
+        "title": "Budget Planning Meeting",
+        "seen": true
     },
     {
         "startDate": {
@@ -105,7 +112,8 @@
             "description": "Meeting with analiticts from external advisory company."
         },
         "type": "custom",
-        "title": "Industry Trends Analysis Meeting"
+        "title": "Industry Trends Analysis Meeting",
+        "seen": true
     },
     {
         "startDate": {
@@ -120,7 +128,8 @@
             "description": "Downtime of Payments system because of planned updates."
         },
         "type": "downtime",
-        "title": "Payments unavailibility"
+        "title": "Payments unavailibility",
+        "seen": true
     },
     {
         "startDate": {
@@ -135,7 +144,8 @@
             "description": "Website Access will be unavailable becasue of maintaining procedures."
         },
         "type": "downtime",
-        "title": "Website Access unavailibility"
+        "title": "Website Access unavailibility",
+        "seen": true
     },
     {
         "startDate": {
@@ -150,7 +160,8 @@
             "description": "Account Access will be unavailable becasue of maintaining procedures."
         },
         "type": "downtime",
-        "title": "Accounts access unavailibility"
+        "title": "Accounts access unavailibility",
+        "seen": true
     },
     {
         "startDate": {
@@ -165,7 +176,8 @@
             "description": "Transaction history will be temporary unavailable becasue of data validation scanning."
         },
         "type": "downtime",
-        "title": "Transaction history unavailibility"
+        "title": "Transaction history unavailibility",
+        "seen": true
     },
     {
         "startDate": {
@@ -180,7 +192,8 @@
             "description": "Fund transfers will be unavailable becasue of maintaining procedures."
         },
         "type": "downtime",
-        "title": "Fund transfers unavailibility"
+        "title": "Fund transfers unavailibility",
+        "seen": true
     },
     {
         "startDate": {
@@ -191,7 +204,8 @@
             "description": "25th day of the following month is the date by which monthly VAT (JPK_V7M) is sent to the tax office and VAT paid."
         },
         "type": "importantDeadlines",
-        "title": "Monthly VAT Settlement (JPK_V7M)"
+        "title": "Monthly VAT Settlement (JPK_V7M)",
+        "seen": true
     },
     {
         "startDate": {
@@ -202,7 +216,8 @@
             "description": "The tax period is the calendar quarter for the non-Union and Union scheme and the calendar month for the import scheme. The One Stop Shop VAT return (and accompanying payment) is required to be submitted by the end of the month following the tax period covered by the return"
         },
         "type": "importantDeadlines",
-        "title": "VAT under the EU VAT OSS Scheme"
+        "title": "VAT under the EU VAT OSS Scheme",
+        "seen": true
     },
     {
         "startDate": {
@@ -213,7 +228,8 @@
             "description": "25th day of the following month is the date by which monthly VAT (JPK_V7M) is sent to the tax office and VAT paid."
         },
         "type": "importantDeadlines",
-        "title": "Monthly VAT Settlement (JPK_V7M)"
+        "title": "Monthly VAT Settlement (JPK_V7M)",
+        "seen": true
     },
     {
         "startDate": {
@@ -224,7 +240,8 @@
             "description": "Last day of the month for the previous month"
         },
         "type": "importantDeadlines",
-        "title": "VAT under the VAT IOSS Import Procedure"
+        "title": "VAT under the VAT IOSS Import Procedure",
+        "seen": true
     },
     {
         "startDate": {
@@ -235,7 +252,8 @@
             "description": "Last day of the month for the previous month"
         },
         "type": "importantDeadlines",
-        "title": "VAT under the VAT IOSS Import Procedure"
+        "title": "VAT under the VAT IOSS Import Procedure",
+        "seen": true
     },
     {
         "startDate": {
@@ -246,7 +264,8 @@
             "description": "Last day of the month for the previous month"
         },
         "type": "importantDeadlines",
-        "title": "VAT under the VAT IOSS Import Procedure"
+        "title": "VAT under the VAT IOSS Import Procedure",
+        "seen": true
     },
     {
         "startDate": {
@@ -257,7 +276,8 @@
             "description": "Last day of the month for the previous month"
         },
         "type": "importantDeadlines",
-        "title": "VAT under the VAT IOSS Import Procedure"
+        "title": "VAT under the VAT IOSS Import Procedure",
+        "seen": true
     },
     {
         "startDate": {
@@ -268,7 +288,8 @@
             "description": "The tax period is the calendar quarter for the non-Union and Union scheme and the calendar month for the import scheme. The One Stop Shop VAT return (and accompanying payment) is required to be submitted by the end of the month following the tax period covered by the return"
         },
         "type": "importantDeadlines",
-        "title": "VAT under the EU VAT OSS Scheme"
+        "title": "VAT under the EU VAT OSS Scheme",
+        "seen": true
     },
     {
         "startDate": {
@@ -279,7 +300,8 @@
             "description": "25th day of the following month is the date by which monthly VAT (JPK_V7M) is sent to the tax office and VAT paid."
         },
         "type": "importantDeadlines",
-        "title": "Monthly VAT Settlement (JPK_V7M)"
+        "title": "Monthly VAT Settlement (JPK_V7M)",
+        "seen": true
     },
     {
         "startDate": {
@@ -290,7 +312,8 @@
             "description": "25th day of the following month is the date by which monthly VAT (JPK_V7M) is sent to the tax office and VAT paid."
         },
         "type": "importantDeadlines",
-        "title": "Monthly VAT Settlement (JPK_V7M)"
+        "title": "Monthly VAT Settlement (JPK_V7M)",
+        "seen": true
     },
     {
         "startDate": {
@@ -310,7 +333,8 @@
             "currency": "EUR"
         },
         "type": "loanSchedule",
-        "title": "Loan installement"
+        "title": "Loan installement",
+        "seen": true
     },
     {
         "startDate": {
@@ -330,7 +354,8 @@
             "currency": "EUR"
         },
         "type": "loanSchedule",
-        "title": "Loan installement"
+        "title": "Loan installement",
+        "seen": true
     },
     {
         "startDate": {
@@ -350,7 +375,8 @@
             "currency": "EUR"
         },
         "type": "loanSchedule",
-        "title": "Loan installement"
+        "title": "Loan installement",
+        "seen": true
     },
     {
         "startDate": {
@@ -370,7 +396,8 @@
             "currency": "EUR"
         },
         "type": "loanSchedule",
-        "title": "Loan installement"
+        "title": "Loan installement",
+        "seen": true
     },
     {
         "startDate": {
@@ -390,7 +417,8 @@
             "currency": "EUR"
         },
         "type": "loanSchedule",
-        "title": "Loan installement"
+        "title": "Loan installement",
+        "seen": true
     },
     {
         "startDate": {
@@ -410,7 +438,8 @@
             "currency": "EUR"
         },
         "type": "loanSchedule",
-        "title": "Loan installement"
+        "title": "Loan installement",
+        "seen": true
     },
     {
         "startDate": {
@@ -430,7 +459,8 @@
             "currency": "EUR"
         },
         "type": "loanSchedule",
-        "title": "Loan installement"
+        "title": "Loan installement",
+        "seen": true
     },
     {
         "startDate": {
@@ -450,7 +480,8 @@
             "currency": "EUR"
         },
         "type": "loanSchedule",
-        "title": "Loan installement"
+        "title": "Loan installement",
+        "seen": true
     },
     {
         "startDate": {
@@ -470,7 +501,8 @@
             "currency": "EUR"
         },
         "type": "loanSchedule",
-        "title": "Loan installement"
+        "title": "Loan installement",
+        "seen": true
     },
     {
         "startDate": {
@@ -490,7 +522,8 @@
             "currency": "EUR"
         },
         "type": "loanSchedule",
-        "title": "Loan installement"
+        "title": "Loan installement",
+        "seen": true
     },
     {
         "startDate": {
@@ -510,7 +543,8 @@
             "currency": "EUR"
         },
         "type": "loanSchedule",
-        "title": "Loan installement"
+        "title": "Loan installement",
+        "seen": true
     },
     {
         "startDate": {
@@ -530,7 +564,8 @@
             "currency": "EUR"
         },
         "type": "loanSchedule",
-        "title": "Loan installement"
+        "title": "Loan installement",
+        "seen": true
     },
     {
         "startDate": {
@@ -545,7 +580,8 @@
             "account_from": "94 9150 0009 8178 4212 6029 3024"
         },
         "type": "standingOrder",
-        "title": "Rent Payment Office 2"
+        "title": "Rent Payment Office 2",
+        "seen": true
     },
     {
         "startDate": {
@@ -560,7 +596,8 @@
             "account_from": "94 9150 0009 1946 6058 9058 9151"
         },
         "type": "standingOrder",
-        "title": "Consulting Fees - Project X"
+        "title": "Consulting Fees - Project X",
+        "seen": true
     },
     {
         "startDate": {
@@ -575,7 +612,8 @@
             "currency": "EUR"
         },
         "type": "standingOrder",
-        "title": "Consulting Fees - Project X"
+        "title": "Consulting Fees - Project X",
+        "seen": true
     },
     {
         "startDate": {
@@ -590,7 +628,8 @@
             "currency": "EUR"
         },
         "type": "standingOrder",
-        "title": "Car Leasing BMW"
+        "title": "Car Leasing BMW",
+        "seen": true
     },
     {
         "startDate": {
@@ -605,7 +644,8 @@
             "account_from": "94 9150 0009 1946 6058 9058 9151"
         },
         "type": "standingOrder",
-        "title": "Rent Payment Office 1"
+        "title": "Rent Payment Office 1",
+        "seen": true
     },
     {
         "startDate": {
@@ -620,7 +660,8 @@
             "account_from": "94 9150 0009 1946 6058 9058 9151"
         },
         "type": "standingOrder",
-        "title": "Rent Payment Office 1"
+        "title": "Rent Payment Office 1",
+        "seen": true
     },
     {
         "startDate": {
@@ -635,7 +676,8 @@
             "receiver": "Rental Agency B&D"
         },
         "type": "standingOrder",
-        "title": "Rent Payment Office 2"
+        "title": "Rent Payment Office 2",
+        "seen": true
     },
     {
         "startDate": {
@@ -650,7 +692,8 @@
             "account_from": "94 9150 0009 1946 6058 9058 9151"
         },
         "type": "standingOrder",
-        "title": "Consulting Fees - Project X"
+        "title": "Consulting Fees - Project X",
+        "seen": true
     },
     {
         "startDate": {
@@ -665,7 +708,8 @@
             "currency": "EUR"
         },
         "type": "standingOrder",
-        "title": "Car Leasing BMW"
+        "title": "Car Leasing BMW",
+        "seen": true
     },
     {
         "startDate": {
@@ -680,6 +724,7 @@
             "account_from": "94 9150 0009 8178 4212 6029 3024"
         },
         "type": "standingOrder",
-        "title": "Rent Payment Office 2"
+        "title": "Rent Payment Office 2",
+        "seen": true
     }
 ]
