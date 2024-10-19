@@ -2,8 +2,8 @@ import React, { useMemo, useState } from 'react';
 import WidgetBorder from './WidgetBorder';
 import { Modal } from 'antd';
 import { WidgetType } from './types';
-import CalendarWidget from '../widgets/calendar/CalendarWidget';
-import CalendarWidgetEdit from '../widgets/calendar/CalendarWidgetEdit';
+import UtmWidget from '../widgets/calendar/UtmWidget';
+import UtmWidgetEdit from '../widgets/calendar/UtmWidgetEdit';
 
 const Widget = ({widgetConfig, i, j, update}:Props) =>{
 
@@ -13,7 +13,7 @@ const Widget = ({widgetConfig, i, j, update}:Props) =>{
 
     const widget = useMemo(()=>{
         if(type==='calendar'){
-            return <CalendarWidget />
+            return <UtmWidget />
         }else{
             return <div>Widget type not found</div>
         }
@@ -22,7 +22,7 @@ const Widget = ({widgetConfig, i, j, update}:Props) =>{
 
     const widgetEdit = useMemo(()=>{
         if(type==='calendar'){
-            return <CalendarWidgetEdit widgetConfig={widgetConfigEdited} setWidgetConfigEdited={setWidgetConfigEdited}/>
+            return <UtmWidgetEdit widgetConfig={widgetConfigEdited} setWidgetConfigEdited={setWidgetConfigEdited}/>
         }else{
             return <div>Widget edit form type not found</div>
         }

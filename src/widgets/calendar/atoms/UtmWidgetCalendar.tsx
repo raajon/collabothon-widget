@@ -1,7 +1,7 @@
-import { Badge, BadgeProps, Calendar, CalendarProps } from 'antd';
+import { Badge, BadgeProps, CalendarProps, Calendar } from 'antd';
 import React from 'react';
 import type { Dayjs } from 'dayjs';
-
+import { EventType } from '../../../lib/types';
 
 const getListData = (value: Dayjs) => {
     let listData: { type: string; content: string }[] = []; // Specify the type of listData
@@ -33,24 +33,18 @@ const getListData = (value: Dayjs) => {
     }
     return listData || [];
   };
-  
-  const getMonthData = (value: Dayjs) => {
-    if (value.month() === 8) {
-      return 1394;
-    }
-  };
 
-const CalendarWidget = () =>{
+const UtmWidgetCalendar = ({data}:Props) =>{
 
-    const monthCellRender = (value: Dayjs) => {
-        const num = getMonthData(value);
-        return num ? (
-          <div className="notes-month">
-            <section>{num}</section>
-            <span>Backlog number</span>
-          </div>
-        ) : null;
-      };
+    // const monthCellRender = (value: Dayjs) => {
+    //     const num = getMonthData(value);
+    //     return num ? (
+    //       <div className="notes-month">
+    //         <section>{num}</section>
+    //         <span>Backlog number</span>
+    //       </div>
+    //     ) : null;
+    //   };
     
     //   const dateCellRender = (value: Dayjs) => {
     //     const listData = getListData(value);
@@ -67,7 +61,15 @@ const CalendarWidget = () =>{
     //   };
 
       const dateCellRender = (value: Dayjs) => {
+        // data.forEach(d=>{
+        //     console.log(d)
+        //     console.log(JSON.stringify(d.startDate))
+        // })
+        // console.log(data)
         const listData = getListData(value);
+        // const listData = data.filter(d=>d.startDate.getDay === value.day && d.startDate.getMonth === value.month)
+        // const listData = data.filter(d=>d.startDate.getDay() === value.day());
+        // console.log(value, listData)
         return (
           <>
             {listData.map((item, i) => (             
@@ -79,7 +81,7 @@ const CalendarWidget = () =>{
 
     const cellRender: CalendarProps<Dayjs>['cellRender'] = (current, info) => {
         if (info.type === 'date') return dateCellRender(current);
-        if (info.type === 'month') return monthCellRender(current);
+        if (info.type === 'month') return <></>;
         return info.originNode;
       };
 
@@ -90,4 +92,8 @@ const CalendarWidget = () =>{
     )
 }
 
-export default CalendarWidget;
+interface Props{
+    data: EventType[]
+}
+
+export default UtmWidgetCalendar;

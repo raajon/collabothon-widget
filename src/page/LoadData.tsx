@@ -17,7 +17,6 @@ const LoadData = () =>{
     }
 
     const putDashboards = async() =>{
-        console.log("putDashboards", dashboards)
         for (const d of dashboards) {
             await axios.post("/parse/classes/Dashboard/", d, {
                 headers: {
