@@ -91,16 +91,7 @@ const UtmWidget = ({widgetConfig}:Props) => {
     else if(widgetConfig.mode === "2"){
       return(
         <>
-          <UtmWidgetFilter
-            types={types}
-            selectedTypes={selectedTypes}
-            setSelectedTypes={setSelectedTypes}
-          />
-          <Row justify='space-between'>
-            <Col span={24}>
-              <UtmWidgetCalendar data={filteredData} setSelectedDate={setSelectedDate} small={true}/>
-            </Col>
-          </Row>
+          <UtmWidgetCalendar data={filteredData} setSelectedDate={setSelectedDate} small={true}/>
         </>
 
       )
@@ -108,11 +99,6 @@ const UtmWidget = ({widgetConfig}:Props) => {
     else if(widgetConfig.mode === "3"){
       return(
         <>
-          <UtmWidgetFilter
-            types={types}
-            selectedTypes={selectedTypes}
-            setSelectedTypes={setSelectedTypes}
-          />
           <UtmWidgetList data={filteredData.filter(d=>d.startDate.getMonth() === selectedDate.month())} />
         </>
 
