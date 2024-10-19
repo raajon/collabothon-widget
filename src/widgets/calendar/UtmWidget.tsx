@@ -11,12 +11,17 @@ const UtmWidget = () =>{
   const [data, setData] = useState([] as EventType[]);
 
   useEffect(()=>{
-    axios.get("/parse/classes/Custom", {
+    axios.get("/parse/classes/Event", {
       headers: {
       'X-Parse-Application-Id': "collabothon",
       },
     }).then(({data})=>{
-      console.log(data)
+      data.results?.forEach((d:any)=>{
+        d.startDate = new Date(d.startDate.iso)
+        if(d.endDate){
+          d.endDate = new Date(d.endDate.iso)
+        }
+      })
       setData(data.results);
     })
    
