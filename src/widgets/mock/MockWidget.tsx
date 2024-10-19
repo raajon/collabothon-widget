@@ -2,6 +2,7 @@ import React from 'react';
 import mobius from '../../assets/mockWidgets/mobius.png'
 import plot1 from '../../assets/mockWidgets/plot1.png'
 import { WidgetType } from '../../lib/types';
+import { Flex } from 'antd';
 
 const MockWidget = ({widgetConfig}: Props) =>{
     console.log(widgetConfig)
@@ -16,9 +17,9 @@ const MockWidget = ({widgetConfig}: Props) =>{
     }
 
     return(
-        <div>
+        <Flex justify={'center'} align={'center'}>
             <img src={img}/>
-        </div>
+        </Flex>
     )
 }
 
