@@ -19,7 +19,7 @@ export interface EventType {
     endDate: Date
     title: string
     data: UniversalDetailProps
-
+    seen: boolean
 }
 
 export interface LoanScheduleProps {

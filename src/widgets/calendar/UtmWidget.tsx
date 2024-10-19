@@ -6,6 +6,7 @@ import { EventType, WidgetType } from '../../lib/types';
 import UtmWidgetList from './atoms/UtmWidgetList';
 import UtmWidgetFilter from './atoms/UtmWidgetFilter';
 import dayjs from 'dayjs';
+import Parse from 'parse';
 
 const UtmWidget = ({widgetConfig}:Props) => {
   const [data, setData] = useState([] as EventType[]);
@@ -15,24 +16,8 @@ const UtmWidget = ({widgetConfig}:Props) => {
   const [selectedDate, setSelectedDate] = useState(dayjs())
 
   useEffect(() => {
-    axios
-      .get('/parse/classes/Event', {
-        headers: {
-          'X-Parse-Application-Id': 'collabothon',
-        },
-      })
-      .then(({ data }) => {
-        data.results?.forEach((d: any) => {
-          d.startDate = new Date(d.startDate.iso);
-          if (d.endDate) {
-            d.endDate = new Date(d.endDate.iso);
-          }
-        });
-        const sortedResults = data.results?.sort((a:EventType, b:EventType) => {
-          return a.startDate.getTime() - b.startDate.getTime(); // Sort in ascending order
-        });
-        setData(sortedResults);
-      });
+    getAllEvents();
+    createLiveQuery();
   }, []);
 
   useEffect(()=> {
@@ -42,6 +27,39 @@ const UtmWidget = ({widgetConfig}:Props) => {
   useEffect(() => {
     filterData();
   }, [data, selectedTypes]); 
+
+  const getAllEvents = () =>{
+    axios
+    .get('/parse/classes/Event', {
+      headers: {
+        'X-Parse-Application-Id': 'collabothon',
+      },
+    })
+    .then(({ data }) => {
+      data.results?.forEach((d: any) => {
+        d.startDate = new Date(d.startDate.iso);
+        if (d.endDate) {
+          d.endDate = new Date(d.endDate.iso);
+        }
+      });
+      const sortedResults = data.results?.sort((a:EventType, b:EventType) => {
+        return a.startDate.getTime() - b.startDate.getTime(); // Sort in ascending order
+      });
+      setData(sortedResults);
+    });
+  }
+
+  const createLiveQuery = async() =>{
+    Parse.initialize("collabothon");
+    Parse.serverURL = 'https://polarny.it/parse'
+    let query = new Parse.Query('Event');
+    // query.equalTo(field, value);
+    let subscription = await query.subscribe();
+    // dispatch(addToLiveQuery(subscription));
+    subscription.on('create', (event) => {
+      getAllEvents();
+    });
+  }
 
   const filterData = () => {
       setFilteredData(

@@ -1,4 +1,4 @@
-import { Radio } from "antd";
+import { Button, Radio } from "antd";
 import React, { useState } from "react";
 import dashboards from "../assets/dashbordsConfig.json";
 import events from "../assets/eventsConfig.json";
@@ -57,6 +57,30 @@ const LoadData = () => {
     await getData(table);
   };
 
+  const addEvent = async() =>{
+    const event = {
+      "startDate": {
+          "__type": "Date",
+          "iso": "2024-10-20T06:00:00.000Z"
+      },
+      "endDate": {
+          "__type": "Date",
+          "iso": "2024-12-01T10:00:00.000Z"
+      },
+      "data": {
+          "description": "Downtime of Payments system because of planned updates."
+      },
+      "type": "downtime",
+      "title": "Payments unavailibility",
+      "seen": false
+    }
+    await axios.post(`/parse/classes/Event`, event, {
+      headers: {
+        "X-Parse-Application-Id": "collabothon",
+      },
+    });
+  }
+
   return (
     <>
       <Radio.Group>
@@ -84,6 +108,8 @@ const LoadData = () => {
       <div>
         <pre>{JSON.stringify(data, null, 2)}</pre>
       </div>
+
+      <Button onClick={addEvent}>Add event</Button>
     </>
   );
 };
