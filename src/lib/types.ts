@@ -7,7 +7,10 @@ export interface DashboardType {
 export interface WidgetType {
     type: string,
     title: string,
-    mode: string
+    mode: string,
+    filters: string[],
+    filterable: string,
+    alerts: string
 }
 
 export interface EventType {

@@ -6,6 +6,7 @@ const MockWidgetEdit = ({widgetConfig, setWidgetConfigEdited}:Props) =>{
 
     const onChange = (field: keyof WidgetType, newValue: string) =>{
         const newWidgetConfig:WidgetType = {...widgetConfig}
+        // @ts-ignore
         newWidgetConfig[field] = newValue as typeof field;
         setWidgetConfigEdited(newWidgetConfig);
     }

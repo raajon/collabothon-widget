@@ -6,7 +6,8 @@
                 {
                     "type":"calendar",
                     "title":"Full options",
-                    "mode": "0"
+                    "mode": "0",
+                    "filters": ["importantDeadlines", "downtime", "appointment", "custom", "loanSchedule", "standingOrder"]
                 }
             ]
         ]
@@ -18,7 +19,8 @@
                 {
                     "type":"calendar",
                     "title":"Small",
-                    "mode": "2"
+                    "mode": "2",
+                    "filters": ["importantDeadlines", "downtime", "appointment", "custom", "loanSchedule", "standingOrder"]
                 }
             ],
             [

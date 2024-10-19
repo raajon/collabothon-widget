@@ -11,7 +11,7 @@ const UtmWidget = ({widgetConfig}:Props) => {
   const [data, setData] = useState([] as EventType[]);
   const [filteredData, setFilteredData] = useState([] as EventType[]);
   const [types, setTypes] = useState<string[]>([]);
-  const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
+  const [selectedTypes, setSelectedTypes] = useState<string[]>(widgetConfig.filters);
   const [selectedDate, setSelectedDate] = useState(dayjs())
 
   useEffect(() => {
@@ -37,12 +37,11 @@ const UtmWidget = ({widgetConfig}:Props) => {
 
   useEffect(()=> {
     setTypes(Array.from(new Set(data.map((item) => item.type))));
-    setSelectedTypes(types);
   },[data]);
 
   useEffect(() => {
     filterData();
-  }, [selectedTypes]); 
+  }, [data, selectedTypes]); 
 
   const filterData = () => {
       setFilteredData(
@@ -54,11 +53,11 @@ const UtmWidget = ({widgetConfig}:Props) => {
     if(widgetConfig.mode === "0"){
       return(
         <>
-          <UtmWidgetFilter
+          {widgetConfig.filterable === "true" && <UtmWidgetFilter
             types={types}
             selectedTypes={selectedTypes}
             setSelectedTypes={setSelectedTypes}
-          />
+          />}
           <Row justify='space-between'>
             <Col span={17}>
               <UtmWidgetCalendar data={filteredData} setSelectedDate={setSelectedDate}/>
@@ -74,11 +73,11 @@ const UtmWidget = ({widgetConfig}:Props) => {
     else if(widgetConfig.mode === "1"){
       return(
         <>
-          <UtmWidgetFilter
+          {widgetConfig.filterable === "true" && <UtmWidgetFilter
             types={types}
             selectedTypes={selectedTypes}
             setSelectedTypes={setSelectedTypes}
-          />
+          />}
           <Row justify='space-between'>
             <Col span={24}>
               <UtmWidgetCalendar data={filteredData} setSelectedDate={setSelectedDate}/>
@@ -91,6 +90,11 @@ const UtmWidget = ({widgetConfig}:Props) => {
     else if(widgetConfig.mode === "2"){
       return(
         <>
+          {widgetConfig.filterable === "true" && <UtmWidgetFilter
+            types={types}
+            selectedTypes={selectedTypes}
+            setSelectedTypes={setSelectedTypes}
+          />}
           <UtmWidgetCalendar data={filteredData} setSelectedDate={setSelectedDate} small={true}/>
         </>
 
@@ -99,6 +103,11 @@ const UtmWidget = ({widgetConfig}:Props) => {
     else if(widgetConfig.mode === "3"){
       return(
         <>
+          {widgetConfig.filterable === "true" && <UtmWidgetFilter
+            types={types}
+            selectedTypes={selectedTypes}
+            setSelectedTypes={setSelectedTypes}
+          />}
           <UtmWidgetList data={filteredData.filter(d=>d.startDate.getMonth() === selectedDate.month())} />
         </>
 
