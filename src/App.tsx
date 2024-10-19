@@ -6,6 +6,7 @@ import Dashboard, { dashboardLoader } from './page/Dashboard';
 import Sandbox from './page/Sandbox';
 import LoadData from './page/LoadData';
 import colors from './colors';
+import CustomDetails from './widgets/calendar/atoms/quarks/CustomDetails';
 
 const App: React.FC = () =>{
   const router = createBrowserRouter(
@@ -15,6 +16,7 @@ const App: React.FC = () =>{
         <Route path="/dashboard/:id" element={<Dashboard/>} loader={dashboardLoader} />
         <Route path="sandbox" element={<Sandbox />} />
         <Route path="loaddata" element={<LoadData />} />
+        <Route path="onet.pl" element={<CustomDetails/>} />
         <Route path="*" element={<Sandbox />} />
       </Route>
   ))
