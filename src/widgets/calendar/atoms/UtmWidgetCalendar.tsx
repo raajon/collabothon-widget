@@ -6,7 +6,7 @@ import getItemStyle from '../../../utils/getItemStyle';
 import UtmWidgetList from './UtmWidgetList';
 import { HeaderRender } from 'antd/es/calendar/generateCalendar';
 
-const UtmWidgetCalendar = ({data}:Props) =>{
+const UtmWidgetCalendar = ({data, setSelectedDate}:Props) =>{
 
     const [modalDate, setModalDate] = useState(null as Dayjs | null);
 
@@ -67,7 +67,7 @@ const UtmWidgetCalendar = ({data}:Props) =>{
           cellRender={cellRender} 
           headerRender={header} 
           onSelect={(newValue: Dayjs)=>setModalDate(newValue)} 
-          onPanelChange={()=>setModalDate(null)}
+          onPanelChange={(newValue: Dayjs)=>{setModalDate(null); setSelectedDate(newValue)}}
         />
           
         <Modal 
@@ -84,6 +84,7 @@ const UtmWidgetCalendar = ({data}:Props) =>{
 
 interface Props{
     data: EventType[]
+    setSelectedDate: Function
 }
 
 export default UtmWidgetCalendar;

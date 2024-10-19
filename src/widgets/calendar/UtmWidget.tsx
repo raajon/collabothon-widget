@@ -6,12 +6,16 @@ import axios from 'axios';
 import { EventType, WidgetType } from '../../lib/types';
 import UtmWidgetList from './atoms/UtmWidgetList';
 import UtmWidgetFilter from './atoms/UtmWidgetFilter';
+import dayjs from 'dayjs';
 
 const UtmWidget = ({widgetConfig}:Props) => {
   const [data, setData] = useState([] as EventType[]);
   const [filteredData, setFilteredData] = useState([] as EventType[]);
   const [types, setTypes] = useState<string[]>([]);
   const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
+  const [selectedDate, setSelectedDate] = useState(dayjs())
+
+  console.log(selectedDate);
 
   useEffect(() => {
     axios
@@ -58,10 +62,10 @@ const UtmWidget = ({widgetConfig}:Props) => {
       />
       <Row justify='space-between'>
         <Col span={17}>
-          <UtmWidgetCalendar data={filteredData} />
+          <UtmWidgetCalendar data={filteredData} setSelectedDate={setSelectedDate}/>
         </Col>
         <Col span={6}>
-          <UtmWidgetList data={filteredData} />
+          <UtmWidgetList data={filteredData.filter(d=>d.startDate.getMonth() === selectedDate.month())} />
         </Col>
       </Row>
     </>
