@@ -3,7 +3,7 @@ import colors from "../colors"
 const getItemStyle = (type: string) => {
   switch (type) {
     case 'importantDeadlines':
-      return colors.mint;
+      return colors.coastGrad;
     case 'downtime':
       return colors.error;
     case 'appointment':
