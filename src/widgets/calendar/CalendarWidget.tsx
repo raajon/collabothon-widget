@@ -1,6 +1,7 @@
 import { Badge, BadgeProps, Calendar, CalendarProps } from 'antd';
 import React from 'react';
 import type { Dayjs } from 'dayjs';
+import colors from "../../colors"
 
 
 const getListData = (value: Dayjs) => {
@@ -8,30 +9,43 @@ const getListData = (value: Dayjs) => {
     switch (value.date()) {
       case 8:
         listData = [
-          { type: 'warning', content: 'This is warning event.' },
-          { type: 'success', content: 'This is usual event.' },
+          { type: 'meeting', content: 'This is meeting event.' },
+          { type: 'payment', content: 'This is usual event.' },
         ];
         break;
       case 10:
         listData = [
-          { type: 'warning', content: 'This is warning event.' },
-          { type: 'success', content: 'This is usual event.' },
-          { type: 'error', content: 'This is error event.' },
+          { type: 'meeting', content: 'This is meeting event.' },
+          { type: 'payment', content: 'This is usual event.' },
+          { type: 'maintanance', content: 'This is maintanance event.' },
         ];
         break;
       case 15:
         listData = [
-          { type: 'warning', content: 'This is warning event' },
-          { type: 'success', content: 'This is very long usual event......' },
-          { type: 'error', content: 'This is error event 1.' },
-          { type: 'error', content: 'This is error event 2.' },
-          { type: 'error', content: 'This is error event 3.' },
-          { type: 'error', content: 'This is error event 4.' },
+          { type: 'meeting', content: 'This is meeting event' },
+          { type: 'payment', content: 'This is very long usual event......' },
+          { type: 'maintanance', content: 'This is maintanance event 1.' },
+          { type: 'maintanance', content: 'This is maintanance event 2.' },
+          { type: 'maintanance', content: 'This is maintanance event 3.' },
+          { type: 'maintanance', content: 'This is maintanance event 4.' },
         ];
         break;
       default:
     }
     return listData || [];
+  };
+  
+  const getItemStyle = (type: string) => {
+    switch (type) {
+      case 'meeting':
+        return colors.harvest;
+      case 'payment':
+        return colors.mint;
+      case 'maintanance':
+        return colors.warning;
+      default:
+        return colors.petrol
+    }
   };
   
   const getMonthData = (value: Dayjs) => {
@@ -71,7 +85,7 @@ const CalendarWidget = () =>{
         return (
           <>
             {listData.map((item, i) => (             
-                <Badge key={i} status={item.type as BadgeProps['status']} />
+                <Badge key={i} color={getItemStyle(item.type)} status={item.type as BadgeProps['status']} />
             ))}
           </>
         );
