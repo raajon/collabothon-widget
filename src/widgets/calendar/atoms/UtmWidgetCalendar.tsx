@@ -1,25 +1,30 @@
-import { Badge, BadgeProps, CalendarProps, Calendar } from 'antd';
-import React from 'react';
+import { Badge, BadgeProps, CalendarProps, Calendar, Modal } from 'antd';
+import React, { useState } from 'react';
 import type { Dayjs } from 'dayjs';
 import { EventType } from '../../../lib/types';
 import getItemStyle from '../../../utils/getItemStyle';
+import UtmWidgetList from './UtmWidgetList';
 
 const UtmWidgetCalendar = ({data}:Props) =>{
 
-    const dateCellRender = (value: Dayjs) => {
-        const listData = data.filter(d=>
-            d.startDate.getDate() === value.date() && 
-            d.startDate.getMonth() === value.month()
-        );
-        return (
-            // <>
-            //   {listData.map((item: EventType, i) => (             
-            //       <Badge key={i} color={getItemStyle(item.type)} status={item.type as BadgeProps['status']} text={item.data.title}/>
-            //   ))}
-            // </>
+    const [modalDate, setModalDate] = useState(null as Dayjs | null);
 
+    const filterEvents = (value: Dayjs | null) =>{
+      if( value ){
+        return data.filter(d=>
+          d.startDate.getDate() === value.date() && 
+          d.startDate.getMonth() === value.month()
+        );
+      }else{
+        return [];
+      }
+    }
+
+    const dateCellRender = (value: Dayjs) => {
+        
+        return (
           <ul className="events">
-            {listData.map((item: EventType, i) => (
+            {filterEvents(value).map((item: EventType, i) => (
               <li key={item.data.title}>
                 <Badge color={getItemStyle(item.type)} status={item.type as BadgeProps['status']} text={item.data.title} />
               </li>
@@ -37,7 +42,12 @@ const UtmWidgetCalendar = ({data}:Props) =>{
     const header = () => (<div>dupa</div>)
 
     return(
-        <Calendar cellRender={cellRender} headerRender={header}/>
+      <>
+        <Calendar cellRender={cellRender} headerRender={header} onSelect={(newValue: Dayjs)=>setModalDate(newValue)}/>
+        <Modal title="Basic Modal" open={!!modalDate} onOk={()=>setModalDate(null)} onCancel={()=>setModalDate(null)}>
+          <UtmWidgetList data={filterEvents(modalDate)} />
+        </Modal>
+      </>
     )
 }
 
