@@ -1,6 +1,10 @@
 import React from "react";
 import type { CSSProperties } from "react";
-import { EventType, LoanScheduleProps, UniversalDetailProps } from "../../../lib/types";
+import {
+  EventType,
+  LoanScheduleProps,
+  UniversalDetailProps,
+} from "../../../lib/types";
 import type { CollapseProps } from "antd";
 import { Collapse } from "antd";
 import getItemStyle from "../../../utils/getItemStyle";
@@ -25,22 +29,22 @@ const UtmWidgetList = ({ data }: Props) => {
   const getProperComponent = (key: string, details: UniversalDetailProps) => {
     switch (key) {
       case "downtime":
-        return <DonwtimeDetails />;
+        return <DonwtimeDetails data={details} />;
 
       case "loanSchedule":
-        return <LoanScheduleDetails data={details}/>;
+        return <LoanScheduleDetails data={details} />;
 
       case "importantDeadlines":
-        return <ImportantDeadlinesDetails />;
+        return <ImportantDeadlinesDetails data={details} />;
 
       case "custom":
-        return <CustomDetails />;
+        return <CustomDetails data={details} />;
 
       case "standingOrder":
-        return <StandingOrderDetails />;
+        return <StandingOrderDetails data={details} />;
 
       case "appointment":
-        return <AppointmentDetails />;
+        return <AppointmentDetails data={details} />;
 
       default:
         <p>No details.</p>;
@@ -60,7 +64,6 @@ const UtmWidgetList = ({ data }: Props) => {
   return (
     <Collapse
       items={items(panelStyle)}
-      defaultActiveKey={["1"]}
       onChange={onChange}
     />
   );
