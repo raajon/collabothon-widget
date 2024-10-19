@@ -25,8 +25,8 @@ const UtmWidgetCalendar = ({data}:Props) =>{
         return (
           <ul className="events">
             {filterEvents(value).map((item: EventType, i) => (
-              <li key={item.data.title}>
-                <Badge color={getItemStyle(item.type)} status={item.type as BadgeProps['status']} text={item.data.title} />
+              <li key={item.title}>
+                <Badge color={getItemStyle(item.type)} status={item.type as BadgeProps['status']} text={item.title} />
               </li>
             ))}
           </ul>

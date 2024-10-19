@@ -14,5 +14,7 @@ export interface EventType{
     type:string
     startDate: Date
     endDate: Date
+    title: string
     data: any
+    
 }
