@@ -1,11 +1,14 @@
 import React, { MouseEventHandler, ReactElement } from 'react';
 import { Button, Card } from 'antd';
 import { SettingFilled } from '@ant-design/icons';
+import logoPng from '../assets/logo.png';
 
-const WidgetBorder = ({title, children, showEdit}: Props) =>{
+const WidgetBorder = ({title, children, logo, showEdit}: Props) =>{
+    const logoImg = <img src={logoPng} style={{height: "20px", marginRight: "20px"}}/>
+    const titleObj = <>{logo && logoImg} {title}</>
 
     return (
-        <Card title={title} extra={<Button type="primary" shape="circle" icon={<SettingFilled />} onClick={showEdit}/>}>
+        <Card title={titleObj} extra={<Button type="primary" shape="circle" icon={<SettingFilled />} onClick={showEdit}/>}>
             {children}
         </Card>
     )
@@ -13,6 +16,7 @@ const WidgetBorder = ({title, children, showEdit}: Props) =>{
 
 interface Props{
     title: string, 
+    logo: boolean,
     showEdit: MouseEventHandler<HTMLElement>,
     children: ReactElement
 }

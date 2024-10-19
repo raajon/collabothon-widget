@@ -43,7 +43,7 @@ const Widget = ({widgetConfig, i, j, update}:Props) =>{
 
     return(
         <>
-            <WidgetBorder title={title} showEdit={showEdit}>
+            <WidgetBorder title={title} logo={type==='calendar'} showEdit={showEdit}>
                 {widget}
             </WidgetBorder>
             <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
