@@ -37,6 +37,9 @@ const App: React.FC = () =>{
       },
       Badge: {
         statusSize: 12
+      },
+      Button: {
+        colorPrimary: colors.petrol
       }
     }, }}>
       <RouterProvider router={router} />
