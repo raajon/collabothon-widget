@@ -95,11 +95,6 @@ const UtmWidget = ({widgetConfig}:Props) => {
     if(widgetConfig.mode === "0"){
       return(
         <>
-          {widgetConfig.filterable === "true" && <UtmWidgetFilter
-            types={types}
-            selectedTypes={selectedTypes}
-            setSelectedTypes={setSelectedTypes}
-          />}
           <Row justify='space-between'>
             <Col span={17}>
               <UtmWidgetCalendar data={filteredData} setSelectedDate={setSelectedDate}/>
@@ -115,16 +110,7 @@ const UtmWidget = ({widgetConfig}:Props) => {
     else if(widgetConfig.mode === "1"){
       return(
         <>
-          {widgetConfig.filterable === "true" && <UtmWidgetFilter
-            types={types}
-            selectedTypes={selectedTypes}
-            setSelectedTypes={setSelectedTypes}
-          />}
-          <Row justify='space-between'>
-            <Col span={24}>
-              <UtmWidgetCalendar data={filteredData} setSelectedDate={setSelectedDate}/>
-            </Col>
-          </Row>
+          <UtmWidgetCalendar data={filteredData} setSelectedDate={setSelectedDate}/>
         </>
 
       )
@@ -132,11 +118,6 @@ const UtmWidget = ({widgetConfig}:Props) => {
     else if(widgetConfig.mode === "2"){
       return(
         <>
-          {widgetConfig.filterable === "true" && <UtmWidgetFilter
-            types={types}
-            selectedTypes={selectedTypes}
-            setSelectedTypes={setSelectedTypes}
-          />}
           <UtmWidgetCalendar data={filteredData} setSelectedDate={setSelectedDate} small={true}/>
         </>
 
@@ -145,11 +126,6 @@ const UtmWidget = ({widgetConfig}:Props) => {
     else if(widgetConfig.mode === "3"){
       return(
         <>
-          {widgetConfig.filterable === "true" && <UtmWidgetFilter
-            types={types}
-            selectedTypes={selectedTypes}
-            setSelectedTypes={setSelectedTypes}
-          />}
           <UtmWidgetList data={filteredData.filter(d=>d.startDate.getMonth() === selectedDate.month())} />
         </>
 
@@ -159,7 +135,7 @@ const UtmWidget = ({widgetConfig}:Props) => {
 
   return (
     <>
-      { newEvents.length>0 && 
+      { widgetConfig.alerts && newEvents.length>0 && 
         <Alert 
         message={`There are ${newEvents.length} new events you haven't seen!`} 
         type="warning" 
@@ -175,6 +151,11 @@ const UtmWidget = ({widgetConfig}:Props) => {
         }
         />
       }
+      {widgetConfig.filterable === "true" && <UtmWidgetFilter
+        types={types}
+        selectedTypes={selectedTypes}
+        setSelectedTypes={setSelectedTypes}
+      />}
       {getWidgetDesign()}
       <Modal 
         title="New events you haven't seen!" 
