@@ -1,8 +1,10 @@
 import React from "react";
 import { StandingOrderProps } from "../../../../lib/types";
-import { Col, Row, Statistic } from "antd";
+import { Button, Col, Row, Statistic } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const StandingOrderDetails = ({ data }: Props) => {
+    const navigate = useNavigate();
   return (
     <>
       <Row gutter={16}>
@@ -26,6 +28,13 @@ const StandingOrderDetails = ({ data }: Props) => {
       <Row style={{ marginTop: 15, }}>
         <Col>
           <Statistic title="Receiver" value={data.receiver} valueStyle={{ fontSize: '20px' }} />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Button onClick={() => navigate("/mockRedirectPage/Create_standing_order")}>
+            Create standing order
+          </Button>
         </Col>
       </Row>
     </>

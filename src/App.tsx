@@ -6,6 +6,7 @@ import Dashboard, { dashboardLoader } from './page/Dashboard';
 import Sandbox from './page/Sandbox';
 import LoadData from './page/LoadData';
 import colors from './colors';
+import MockRedirectPage from './page/MockRedirectPage';
 
 const App: React.FC = () =>{
   const router = createBrowserRouter(
@@ -15,7 +16,7 @@ const App: React.FC = () =>{
         <Route path="/dashboard/:id" element={<Dashboard/>} loader={dashboardLoader} />
         <Route path="sandbox" element={<Sandbox />} />
         <Route path="loaddata" element={<LoadData />} />
-        <Route path="onet.pl" element={<div><h1>STRONA PŁATNOŚCI CZY COŚ TAM</h1></div>} />
+        <Route path="mockRedirectPage/:msg" element={<MockRedirectPage />} />
         <Route path="*" element={<Sandbox />} />
       </Route>
   ))
