@@ -5,7 +5,7 @@ import {
   UniversalDetailProps,
 } from "../../../lib/types";
 import type { CollapseProps } from "antd";
-import { Collapse } from "antd";
+import { Collapse, Typography } from "antd";
 import getItemStyle from "../../../utils/getItemStyle";
 import DonwtimeDetails from "./quarks/DonwtimeDetails";
 import LoanScheduleDetails from "./quarks/LoanScheduleDetails";
@@ -61,10 +61,13 @@ const UtmWidgetList = ({ data }: Props) => {
     }));
 
   return (
-    <Collapse
-      items={items(panelStyle)}
-      onChange={onChange}
-    />
+    <>
+      {data.length===0 && <Typography.Title level={3} >No Events</Typography.Title>}
+      {data.length>0 && <Collapse
+        items={items(panelStyle)}
+        onChange={onChange}
+      />}
+    </>
   );
 };
 
