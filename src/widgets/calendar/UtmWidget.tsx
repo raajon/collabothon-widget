@@ -1,4 +1,4 @@
-import { Row, Col } from 'antd';
+import { Row, Col, Alert, Button, Space, Modal } from 'antd';
 import React, { useEffect, useState } from 'react';
 import UtmWidgetCalendar from './atoms/UtmWidgetCalendar';
 import axios from 'axios';
@@ -14,6 +14,8 @@ const UtmWidget = ({widgetConfig}:Props) => {
   const [types, setTypes] = useState<string[]>([]);
   const [selectedTypes, setSelectedTypes] = useState<string[]>(widgetConfig.filters);
   const [selectedDate, setSelectedDate] = useState(dayjs())
+  const [newEvents, setNewEvents] = useState([] as EventType[])
+  const [newEventsDetails, setNewEventsDetails] = useState([] as EventType[])
 
   useEffect(() => {
     getAllEvents();
@@ -22,6 +24,7 @@ const UtmWidget = ({widgetConfig}:Props) => {
 
   useEffect(()=> {
     setTypes(Array.from(new Set(data.map((item) => item.type))));
+    findNewEvents();
   },[data]);
 
   useEffect(() => {
@@ -57,10 +60,11 @@ const UtmWidget = ({widgetConfig}:Props) => {
     Parse.initialize("collabothon");
     Parse.serverURL = 'https://polarny.it/parse'
     let query = new Parse.Query('Event');
-    // query.equalTo(field, value);
     let subscription = await query.subscribe();
-    // dispatch(addToLiveQuery(subscription));
     subscription.on('create', (event) => {
+      getAllEvents();
+    });
+    subscription.on('update', (event) => {
       getAllEvents();
     });
   }
@@ -70,6 +74,22 @@ const UtmWidget = ({widgetConfig}:Props) => {
         data.filter((event) => selectedTypes.includes(event.type))
       );
   };
+
+  const findNewEvents = () =>{
+    setNewEvents(data.filter((event)=>!event.seen));
+  }
+
+  const acknowledgeAll = async() =>{
+    for( const e of newEvents){
+      await axios
+        .put(`/parse/classes/Event/${e.objectId}`, {seen:true}, {
+          headers: {
+            'X-Parse-Application-Id': 'collabothon',
+          },
+        })
+    }
+    setNewEventsDetails([])
+  }
 
   const getWidgetDesign = () =>{
     if(widgetConfig.mode === "0"){
@@ -139,7 +159,33 @@ const UtmWidget = ({widgetConfig}:Props) => {
 
   return (
     <>
+      { newEvents.length>0 && 
+        <Alert 
+        message={`There are ${newEvents.length} new events you haven't seen!`} 
+        type="warning" 
+        action={
+          <Space direction="vertical">
+            <Button size="small" type="primary" onClick={acknowledgeAll}>
+              Acknowledge all
+            </Button>
+            <Button size="small" danger ghost onClick={()=>setNewEventsDetails([...newEvents])}>
+              See details
+            </Button>
+          </Space>
+        }
+        />
+      }
       {getWidgetDesign()}
+      <Modal 
+        title="New events you haven't seen!" 
+        open={newEventsDetails.length>0} 
+        // footer={()=><></>} 
+        okText="Acknowledge all"
+        onOk={acknowledgeAll}
+        onCancel={()=>setNewEventsDetails([])}
+      >
+        <UtmWidgetList data={newEventsDetails} />
+      </Modal>
     </>
   );
 };
