@@ -25,6 +25,11 @@ const MockWidgetEdit = ({widgetConfig, setWidgetConfigEdited}:Props) =>{
                     <Radio.Button value="2">Plot 2</Radio.Button>
                     <Radio.Button value="3">Loan</Radio.Button>
                     <Radio.Button value="4">Transaction</Radio.Button>
+                    <Radio.Button value="6">Accounts</Radio.Button>
+                    <Radio.Button value="7">Circle Graph</Radio.Button>
+                    <Radio.Button value="8">Info</Radio.Button>
+                    <Radio.Button value="9">Services</Radio.Button>
+                    <Radio.Button value="10">Order</Radio.Button>
                 </Radio.Group>
             </div>
         </>
