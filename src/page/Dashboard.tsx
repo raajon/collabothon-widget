@@ -41,7 +41,7 @@ const Dashboard = () =>{
             <Title>{dashboard.title}</Title>
             <Row>
                 {widgets.map((col,i)=>(
-                    <Col key={i} span={24/widgets.length}>{col.map((w:WidgetType,j)=> <Widget key={j} i={i} j={j} widgetConfig={w} update={updateWidget}/>)}</Col>
+                    <Col key={i} span={24/widgets.length}>{col.map((w:WidgetType,j)=> <Widget key={`${w.title}-${i}-${j}`} i={i} j={j} widgetConfig={w} update={updateWidget}/>)}</Col>
                 ))}
             </Row>
         </>

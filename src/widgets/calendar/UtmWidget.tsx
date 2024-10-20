@@ -25,6 +25,10 @@ const UtmWidget = ({widgetConfig}:Props) => {
   },[data]);
 
   useEffect(() => {
+    setSelectedTypes(widgetConfig.filters);
+  }, [widgetConfig]); 
+
+  useEffect(() => {
     filterData();
   }, [data, selectedTypes]); 
 
