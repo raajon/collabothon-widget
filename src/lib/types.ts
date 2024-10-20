@@ -4,6 +4,19 @@ export interface DashboardType {
     widgets: WidgetType[][]
 }
 
+export interface NewEventType {
+    objectId?: string,
+    type: string,
+    title?: string,
+    startDate?: Date,
+    endDate?: Date,
+    seen: boolean,
+    data: {
+        description?: string
+    }
+}
+
+
 export interface WidgetType {
     type: string,
     title: string,

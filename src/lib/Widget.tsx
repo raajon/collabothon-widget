@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import WidgetBorder from './WidgetBorder';
 import { Button, Modal, Space } from 'antd';
-import { WidgetType } from './types';
+import { EventType, NewEventType, WidgetType } from './types';
 import UtmWidget from '../widgets/calendar/UtmWidget';
 import UtmWidgetEdit from '../widgets/calendar/UtmWidgetEdit';
 import MockWidget from '../widgets/mock/MockWidget';
@@ -14,6 +14,11 @@ const Widget = ({ widgetConfig, i, j, update }: Props) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isNewEventModalOpen, setIsNewEventModalOpen] = useState(false);
     const { type, title } = widgetConfig;
+    const [eventConfiguration, setEventConfiguration] = useState({
+        type: 'custom',
+        seen: false,
+        data: {}
+    })
 
     const widget = useMemo(() => {
         if (type === 'calendar') {
@@ -37,8 +42,8 @@ const Widget = ({ widgetConfig, i, j, update }: Props) => {
     }, [type, widgetConfigEdited]);
 
     const newEventCreate = useMemo(() => {
-        return <UtmNewEventCreate widgetConfig={widgetConfigEdited} setWidgetConfigEdited={setWidgetConfigEdited} />
-    }, [type, widgetConfigEdited]);
+        return <UtmNewEventCreate eventConfiguration={eventConfiguration} setEventConfiguration={setEventConfiguration} />
+    }, [eventConfiguration]);
 
     const showEdit = () => {
         setIsModalOpen(true);
@@ -57,18 +62,22 @@ const Widget = ({ widgetConfig, i, j, update }: Props) => {
         setIsNewEventModalOpen(true);
     }
 
-    const handleNewEventOk = () => {
-        //update(i,j, widgetConfigEdited);
+    const saveNewEvent = () => {
+        //TODO save event
         setIsNewEventModalOpen(false);
     };
 
     const handleNewEventCancel = () => {
+        const clearEvent = {
+            type: 'custom',
+            seen: false,
+            data: {},
+            startDate: null,
+            endDate: null,
+            title: null}
+        setEventConfiguration(clearEvent);
         setIsNewEventModalOpen(false);
     };
-
-    const saveNewEvent = () => {
-        throw new Error('Function not implemented.');
-    }
 
     return (
         <>
