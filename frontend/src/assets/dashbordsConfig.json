@@ -18,11 +18,7 @@
               "alerts": "false"
             }
           ]
-        ],
-        "createdAt": "2024-10-19T22:14:28.853Z",
-        "updatedAt": "2024-10-20T07:32:58.142Z",
-        "objectId": "zNVTeUQpdJ",
-        "className": "Dashboard"
+        ]
     },
     {
       "title": "Appointments",
@@ -33,6 +29,7 @@
             "title": "appointment",
             "mode": "2",
             "filters": [
+              "importantDeadlines",
               "appointment",
               "custom"
             ]
@@ -50,27 +47,18 @@
             "mode": "0"
           }
         ]
-      ],
-      "createdAt": "2024-10-19T22:14:28.906Z",
-      "updatedAt": "2024-10-20T07:14:55.527Z",
-      "objectId": "klDEBUlmCO",
-      "className": "Dashboard"
+      ]
     },
     {
-      "title": "Appointments",
+      "title": "Transactions",
       "widgets": [
         [
           {
             "type": "calendar",
-            "title": "appointment",
+            "title": "Transactions",
             "mode": "3",
             "filters": [
-                "appointment",
-                "importantDeadlines",
-                "downtime",
-                "loanSchedule",
-                "custom",
-                "standingOrder"
+                "loanSchedule"
             ]
           }
         ],
@@ -97,12 +85,7 @@
             "title": "appointment",
             "mode": "4",
             "filters": [
-                "appointment",
-                "importantDeadlines",
-                "downtime",
-                "loanSchedule",
-                "custom",
-                "standingOrder"
+                "downtime"
             ]
           }
         ],
