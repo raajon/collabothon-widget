@@ -62,7 +62,7 @@ const PageLayout = () =>{
                 </div>
             </Content>
             <Footer style={{ textAlign: 'center' }}>
-                Fest widget demo ©{new Date().getFullYear()} Created by Completely Insane City Druids (CICD)
+                FEST widget demo ©{new Date().getFullYear()} Created by Completely Insane City Druids (CICD)
             </Footer>
         </Layout>
     )
