@@ -1,39 +1,124 @@
 [
     {
-        "title":"Selfstand",
-        "widgets":[
-            [
-                {
-                    "type":"calendar",
-                    "title":"Full options",
-                    "mode": "0",
-                    "filters": ["importantDeadlines", "downtime", "appointment", "custom", "loanSchedule", "standingOrder"]
-                }
-            ]
-        ]
+        "title": "All Events",
+        "widgets": [
+          [
+            {
+              "type": "calendar",
+              "title": "Big",
+              "mode": "0",
+              "filters": [
+                "appointment",
+                "importantDeadlines",
+                "downtime",
+                "loanSchedule",
+                "custom",
+                "standingOrder"
+              ],
+              "alerts": "false"
+            }
+          ]
+        ],
+        "createdAt": "2024-10-19T22:14:28.853Z",
+        "updatedAt": "2024-10-20T07:32:58.142Z",
+        "objectId": "zNVTeUQpdJ",
+        "className": "Dashboard"
     },
     {
-        "title":"Dashboard 1",
-        "widgets":[
-            [
-                {
-                    "type":"calendar",
-                    "title":"Small",
-                    "mode": "2",
-                    "filters": ["importantDeadlines", "downtime", "appointment", "custom", "loanSchedule", "standingOrder"]
-                }
-            ],
-            [
-                {
-                    "type":"mock",
-                    "title":"Plot 1",
-                    "mode": "1"
-                },{
-                    "type":"mock",
-                    "title":"Virtual assistant",
-                    "mode": "0"
-                }
+      "title": "Appointments",
+      "widgets": [
+        [
+          {
+            "type": "calendar",
+            "title": "appointment",
+            "mode": "2",
+            "filters": [
+              "appointment",
+              "custom"
             ]
+          }
+        ],
+        [
+          {
+            "type": "mock",
+            "title": "Plot 1",
+            "mode": "1"
+          },
+          {
+            "type": "mock",
+            "title": "Virtual assistant",
+            "mode": "0"
+          }
         ]
+      ],
+      "createdAt": "2024-10-19T22:14:28.906Z",
+      "updatedAt": "2024-10-20T07:14:55.527Z",
+      "objectId": "klDEBUlmCO",
+      "className": "Dashboard"
+    },
+    {
+      "title": "Appointments",
+      "widgets": [
+        [
+          {
+            "type": "calendar",
+            "title": "appointment",
+            "mode": "3",
+            "filters": [
+                "appointment",
+                "importantDeadlines",
+                "downtime",
+                "loanSchedule",
+                "custom",
+                "standingOrder"
+            ]
+          }
+        ],
+        [
+          {
+            "type": "mock",
+            "title": "Plot 1",
+            "mode": "1"
+          },
+          {
+            "type": "mock",
+            "title": "Virtual assistant",
+            "mode": "0"
+          }
+        ]
+      ]
+    },
+    {
+      "title": "Appointments",
+      "widgets": [
+        [
+          {
+            "type": "calendar",
+            "title": "appointment",
+            "mode": "4",
+            "filters": [
+                "appointment",
+                "importantDeadlines",
+                "downtime",
+                "loanSchedule",
+                "custom",
+                "standingOrder"
+            ]
+          }
+        ],
+        [
+          {
+            "type": "mock",
+            "title": "Plot 1",
+            "mode": "1"
+          },
+          {
+            "type": "mock",
+            "title": "Virtual assistant",
+            "mode": "0"
+          }
+        ]
+      ]
     }
-]
+    
+  ]

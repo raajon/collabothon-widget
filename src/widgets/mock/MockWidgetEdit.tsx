@@ -22,6 +22,9 @@ const MockWidgetEdit = ({widgetConfig, setWidgetConfigEdited}:Props) =>{
                 <Radio.Group value={widgetConfig.mode} onChange={(e)=>onChange("mode", e.target.value)}>
                     <Radio.Button value="0">Mobius</Radio.Button>
                     <Radio.Button value="1">Plot 1</Radio.Button>
+                    <Radio.Button value="2">Plot 2</Radio.Button>
+                    <Radio.Button value="3">Loan</Radio.Button>
+                    <Radio.Button value="4">Transaction</Radio.Button>
                 </Radio.Group>
             </div>
         </>
