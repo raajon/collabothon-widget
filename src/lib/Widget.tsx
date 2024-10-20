@@ -1,12 +1,13 @@
 import React, { useMemo, useState } from 'react';
 import WidgetBorder from './WidgetBorder';
 import { Button, Modal, Space } from 'antd';
-import { EventType, NewEventType, WidgetType } from './types';
+import { EventType, WidgetType } from './types';
 import UtmWidget from '../widgets/calendar/UtmWidget';
 import UtmWidgetEdit from '../widgets/calendar/UtmWidgetEdit';
 import MockWidget from '../widgets/mock/MockWidget';
 import MockWidgetEdit from '../widgets/mock/MockWidgetEdit';
 import UtmNewEventCreate from '../widgets/calendar/UtmNewEventCreate';
+import axios from 'axios';
 
 const Widget = ({ widgetConfig, i, j, update }: Props) => {
 
@@ -16,9 +17,9 @@ const Widget = ({ widgetConfig, i, j, update }: Props) => {
     const { type, title } = widgetConfig;
     const [eventConfiguration, setEventConfiguration] = useState({
         type: 'custom',
-        seen: false,
+        seen: true,
         data: {}
-    })
+    }as EventType)
 
     const widget = useMemo(() => {
         if (type === 'calendar') {
@@ -62,19 +63,35 @@ const Widget = ({ widgetConfig, i, j, update }: Props) => {
         setIsNewEventModalOpen(true);
     }
 
-    const saveNewEvent = () => {
-        //TODO save event
+    const saveNewEvent = async() => {
+        const newEventConfiguration = {
+            ...eventConfiguration,
+            startDate:{
+                "__type":"Date",
+                iso: eventConfiguration.startDate
+            },
+            endDate:{
+                "__type":"Date",
+                iso: eventConfiguration.endDate
+            },
+        }
+        await axios.post("/parse/classes/Event", newEventConfiguration, {
+            headers: {
+              "X-Parse-Application-Id": "collabothon",
+            },
+          });
         setIsNewEventModalOpen(false);
     };
 
     const handleNewEventCancel = () => {
         const clearEvent = {
             type: 'custom',
-            seen: false,
+            title: "",
+            seen: true,
             data: {},
-            startDate: null,
-            endDate: null,
-            title: null}
+            startDate: new Date(),
+            endDate: new Date()
+        }
         setEventConfiguration(clearEvent);
         setIsNewEventModalOpen(false);
     };

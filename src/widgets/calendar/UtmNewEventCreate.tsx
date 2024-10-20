@@ -40,17 +40,17 @@ const UtmNewEventCreate = ({ eventConfiguration, setEventConfiguration }: Props)
                 <TextArea onChange={(e)=>onDescriptionChange( e.target.value)} />
             </Form.Item>
             <Form.Item label="Start date">
-                <DatePicker onChange={(e)=>onChange("startDate", e.toString())} />
+                <DatePicker onChange={(e)=>onChange("startDate", e.toString())} showTime/>
             </Form.Item>
-            <Form.Item label="Start time">
+            {/* <Form.Item label="Start time">
                 <TimePicker onChange={(e)=>onStartTimeChange(e.hour(), e.minute())}/>
-            </Form.Item>
+            </Form.Item> */}
             <Form.Item label="End date">
-                <DatePicker  onChange={(e)=>onChange("endDate", e.toString())}/>
+                <DatePicker  onChange={(e)=>onChange("endDate", e.toString())} showTime/>
             </Form.Item>
-            <Form.Item label="End time">
+            {/* <Form.Item label="End time">
                 <TimePicker onChange={(e)=>onEndTimeChange(e.hour(), e.minute())}/>
-            </Form.Item>
+            </Form.Item> */}
         </Form>
     )
 }

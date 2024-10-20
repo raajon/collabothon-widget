@@ -27,7 +27,7 @@ export interface WidgetType {
 }
 
 export interface EventType {
-    objectId: string
+    objectId?: string
     type: string
     startDate: Date
     endDate: Date
