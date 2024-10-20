@@ -62,7 +62,7 @@ const PageLayout = () =>{
                 </div>
             </Content>
             <Footer style={{ textAlign: 'center' }}>
-                Ant Design ©{new Date().getFullYear()} Created by Ant UED
+                Fest widget demo ©{new Date().getFullYear()} Created by Completely Insane City Druids (CICD)
             </Footer>
         </Layout>
     )
