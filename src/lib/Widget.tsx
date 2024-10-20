@@ -102,7 +102,7 @@ const Widget = ({ widgetConfig, i, j, update }: Props) => {
             <WidgetBorder title={title} type={type} logo={type === 'calendar'} showEdit={showEdit} showNewEventCreate={showNewEventCreate}>
                 {widget}
             </WidgetBorder>
-            <Modal title="New Event" open={isNewEventModalOpen} footer={
+            <Modal title="New Event" open={isNewEventModalOpen} onCancel={handleNewEventCancel} footer={
                 <Space>
                     <Button type="primary" onClick={saveNewEvent}>Save</Button>
                     <Button type="primary" onClick={handleNewEventCancel}>Cancel</Button>
