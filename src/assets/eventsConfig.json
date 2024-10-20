@@ -41,7 +41,7 @@
     {
         "type": "appointment",
         "data": {
-            "place": "Gräfstr. 85, 60487 Frankfurt am Main",
+            "place": "Berger Str. 188 - 190, 60385 Frankfurt am Main",
             "appointmentWIth": "John Doe"
         },
         "startDate": {
