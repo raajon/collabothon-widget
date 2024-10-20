@@ -47,6 +47,7 @@ const Widget = ({ widgetConfig, i, j, update }: Props) => {
     }, [eventConfiguration]);
 
     const showEdit = () => {
+        setWidgetConfigEdited(widgetConfig)
         setIsModalOpen(true);
     }
 
